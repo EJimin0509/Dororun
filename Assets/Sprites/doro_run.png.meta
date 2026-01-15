@@ -1,34 +1,34 @@
 fileFormatVersion: 2
-guid: 13d0bb0dd8ccb66449e6e4cc767f7711
+guid: 9f9f71b086c4ec24a9efee8038ca4144
 TextureImporter:
   internalIDToNameTable:
   - first:
-      213: 259542345603755084
-    second: "\uB3C4\uB85C\uB871_Run_0"
+      213: -4241797334391381098
+    second: doro_run_0
   - first:
-      213: 4360045315240731749
-    second: "\uB3C4\uB85C\uB871_Run_1"
+      213: -7665684591334489363
+    second: doro_run_1
   - first:
-      213: -5716015566229160238
-    second: "\uB3C4\uB85C\uB871_Run_2"
+      213: -5223303131823409862
+    second: doro_run_2
   - first:
-      213: -273069048547102138
-    second: "\uB3C4\uB85C\uB871_Run_3"
+      213: 2874769885358343113
+    second: doro_run_3
   - first:
-      213: 5226573145849931866
-    second: "\uB3C4\uB85C\uB871_Run_4"
+      213: 1828539886035489279
+    second: doro_run_4
   - first:
-      213: -8512174810536012704
-    second: "\uB3C4\uB85C\uB871_Run_5"
+      213: 4303000983980611885
+    second: doro_run_5
   - first:
-      213: -5182463349055683911
-    second: "\uB3C4\uB85C\uB871_Run_6"
+      213: -943819767028544725
+    second: doro_run_6
   - first:
-      213: 340081956586755615
-    second: "\uB3C4\uB85C\uB871_Run_7"
+      213: -5192784493003746008
+    second: doro_run_7
   - first:
-      213: -8972513243729034151
-    second: "\uB3C4\uB85C\uB871_Run_8"
+      213: -2394934661047386669
+    second: doro_run_8
   externalObjects: {}
   serializedVersion: 13
   mipmaps:
@@ -150,199 +150,177 @@ TextureImporter:
     serializedVersion: 2
     sprites:
     - serializedVersion: 2
-      name: "\uB3C4\uB85C\uB871_Run_0"
+      name: doro_run_0
       rect:
         serializedVersion: 2
-        x: 26
-        y: 45
-        width: 256
+        x: 27
+        y: 46
+        width: 255
+        height: 229
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 69327626ccb1225c0800000000000000
+      internalID: -4241797334391381098
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: doro_run_1
+      rect:
+        serializedVersion: 2
+        x: 344
+        y: 44
+        width: 258
         height: 231
       alignment: 0
-      pivot: {x: 0, y: 0}
+      pivot: {x: 0.5, y: 0.5}
       border: {x: 0, y: 0, z: 0, w: 0}
       customData: 
       outline: []
       physicsShape: []
       tessellationDetail: -1
       bones: []
-      spriteID: c4c22e163641a9300800000000000000
-      internalID: 259542345603755084
+      spriteID: de2825d8a740e9590800000000000000
+      internalID: -7665684591334489363
       vertices: []
       indices: 
       edges: []
       weights: []
     - serializedVersion: 2
-      name: "\uB3C4\uB85C\uB871_Run_1"
-      rect:
-        serializedVersion: 2
-        x: 269
-        y: 178
-        width: 14
-        height: 8
-      alignment: 0
-      pivot: {x: 0, y: 0}
-      border: {x: 0, y: 0, z: 0, w: 0}
-      customData: 
-      outline: []
-      physicsShape: []
-      tessellationDetail: -1
-      bones: []
-      spriteID: 564a78b1d1ef18c30800000000000000
-      internalID: 4360045315240731749
-      vertices: []
-      indices: 
-      edges: []
-      weights: []
-    - serializedVersion: 2
-      name: "\uB3C4\uB85C\uB871_Run_2"
-      rect:
-        serializedVersion: 2
-        x: 345
-        y: 45
-        width: 257
-        height: 231
-      alignment: 0
-      pivot: {x: 0, y: 0}
-      border: {x: 0, y: 0, z: 0, w: 0}
-      customData: 
-      outline: []
-      physicsShape: []
-      tessellationDetail: -1
-      bones: []
-      spriteID: 2debe449022aca0b0800000000000000
-      internalID: -5716015566229160238
-      vertices: []
-      indices: 
-      edges: []
-      weights: []
-    - serializedVersion: 2
-      name: "\uB3C4\uB85C\uB871_Run_3"
+      name: doro_run_2
       rect:
         serializedVersion: 2
         x: 663
         y: 51
         width: 279
-        height: 225
+        height: 224
       alignment: 0
-      pivot: {x: 0, y: 0}
+      pivot: {x: 0.5, y: 0.5}
       border: {x: 0, y: 0, z: 0, w: 0}
       customData: 
       outline: []
       physicsShape: []
       tessellationDetail: -1
       bones: []
-      spriteID: 642323aa52dd53cf0800000000000000
-      internalID: -273069048547102138
+      spriteID: a35fa71d9791387b0800000000000000
+      internalID: -5223303131823409862
       vertices: []
       indices: 
       edges: []
       weights: []
     - serializedVersion: 2
-      name: "\uB3C4\uB85C\uB871_Run_4"
+      name: doro_run_3
       rect:
         serializedVersion: 2
         x: 1004
-        y: 45
+        y: 44
         width: 258
         height: 231
       alignment: 0
-      pivot: {x: 0, y: 0}
+      pivot: {x: 0.5, y: 0.5}
       border: {x: 0, y: 0, z: 0, w: 0}
       customData: 
       outline: []
       physicsShape: []
       tessellationDetail: -1
       bones: []
-      spriteID: a582bf6a594888840800000000000000
-      internalID: 5226573145849931866
+      spriteID: 9c346c3cafb35e720800000000000000
+      internalID: 2874769885358343113
       vertices: []
       indices: 
       edges: []
       weights: []
     - serializedVersion: 2
-      name: "\uB3C4\uB85C\uB871_Run_5"
+      name: doro_run_4
       rect:
         serializedVersion: 2
         x: 1323
-        y: 45
+        y: 46
         width: 258
-        height: 231
+        height: 229
       alignment: 0
-      pivot: {x: 0, y: 0}
+      pivot: {x: 0.5, y: 0.5}
       border: {x: 0, y: 0, z: 0, w: 0}
       customData: 
       outline: []
       physicsShape: []
       tessellationDetail: -1
       bones: []
-      spriteID: 06419f7fb1eaed980800000000000000
-      internalID: -8512174810536012704
+      spriteID: ff157cc9657406910800000000000000
+      internalID: 1828539886035489279
       vertices: []
       indices: 
       edges: []
       weights: []
     - serializedVersion: 2
-      name: "\uB3C4\uB85C\uB871_Run_6"
+      name: doro_run_5
       rect:
         serializedVersion: 2
-        x: 1643
+        x: 1642
         y: 49
         width: 256
-        height: 227
+        height: 226
       alignment: 0
-      pivot: {x: 0, y: 0}
+      pivot: {x: 0.5, y: 0.5}
       border: {x: 0, y: 0, z: 0, w: 0}
       customData: 
       outline: []
       physicsShape: []
       tessellationDetail: -1
       bones: []
-      spriteID: 9b20e0aba013418b0800000000000000
-      internalID: -5182463349055683911
+      spriteID: d29125eb89457bb30800000000000000
+      internalID: 4303000983980611885
       vertices: []
       indices: 
       edges: []
       weights: []
     - serializedVersion: 2
-      name: "\uB3C4\uB85C\uB871_Run_7"
+      name: doro_run_6
       rect:
         serializedVersion: 2
-        x: 1960
+        x: 1959
         y: 57
         width: 255
-        height: 219
+        height: 218
       alignment: 0
-      pivot: {x: 0, y: 0}
+      pivot: {x: 0.5, y: 0.5}
       border: {x: 0, y: 0, z: 0, w: 0}
       customData: 
       outline: []
       physicsShape: []
       tessellationDetail: -1
       bones: []
-      spriteID: f169fd8dcb638b400800000000000000
-      internalID: 340081956586755615
+      spriteID: b2b85462ce0e6e2f0800000000000000
+      internalID: -943819767028544725
       vertices: []
       indices: 
       edges: []
       weights: []
     - serializedVersion: 2
-      name: "\uB3C4\uB85C\uB871_Run_8"
+      name: doro_run_7
       rect:
         serializedVersion: 2
         x: 2277
         y: 49
-        width: 257
-        height: 227
+        width: 256
+        height: 226
       alignment: 0
-      pivot: {x: 0, y: 0}
+      pivot: {x: 0.5, y: 0.5}
       border: {x: 0, y: 0, z: 0, w: 0}
       customData: 
       outline: []
       physicsShape: []
       tessellationDetail: -1
       bones: []
-      spriteID: 9540b054eba3b7380800000000000000
-      internalID: -8972513243729034151
+      spriteID: 825da5324068fe7b0800000000000000
+      internalID: -5192784493003746008
       vertices: []
       indices: 
       edges: []
@@ -351,7 +329,7 @@ TextureImporter:
     customData: 
     physicsShape: []
     bones: []
-    spriteID: 
+    spriteID: db7dd17b28cb54e4e960ac1cfc14335a
     internalID: 0
     vertices: []
     indices: 
@@ -359,17 +337,18 @@ TextureImporter:
     weights: []
     secondaryTextures: []
     spriteCustomMetadata:
-      entries: []
+      entries:
+      - key: SpriteEditor.SliceSettings
+        value: '{"sliceOnImport":false,"gridCellCount":{"x":1.0,"y":1.0},"gridSpriteSize":{"x":64.0,"y":64.0},"gridSpriteOffset":{"x":0.0,"y":0.0},"gridSpritePadding":{"x":0.0,"y":0.0},"pivot":{"x":0.5,"y":0.5},"pivotPixels":{"x":0.0,"y":0.0},"autoSlicingMethod":0,"spriteAlignment":0,"pivotUnitMode":0,"slicingType":0,"keepEmptyRects":false,"isAlternate":false}'
     nameFileIdTable:
-      "\uB3C4\uB85C\uB871_Run_0": 259542345603755084
-      "\uB3C4\uB85C\uB871_Run_1": 4360045315240731749
-      "\uB3C4\uB85C\uB871_Run_2": -5716015566229160238
-      "\uB3C4\uB85C\uB871_Run_3": -273069048547102138
-      "\uB3C4\uB85C\uB871_Run_4": 5226573145849931866
-      "\uB3C4\uB85C\uB871_Run_5": -8512174810536012704
-      "\uB3C4\uB85C\uB871_Run_6": -5182463349055683911
-      "\uB3C4\uB85C\uB871_Run_7": 340081956586755615
-      "\uB3C4\uB85C\uB871_Run_8": -8972513243729034151
+      doro_run_0: -4241797334391381098
+      doro_run_1: -7665684591334489363
+      doro_run_2: -5223303131823409862
+      doro_run_3: 2874769885358343113
+      doro_run_4: 1828539886035489279
+      doro_run_5: 4303000983980611885
+      doro_run_6: -943819767028544725
+      doro_run_7: -5192784493003746008
   mipmapLimitGroupName: 
   pSDRemoveMatte: 0
   userData: 
