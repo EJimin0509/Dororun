@@ -4,7 +4,12 @@
 TagManager:
   serializedVersion: 3
   tags:
-  - Hit
+  - Ground
+  - Obstacle
+  - FallZone
+  - Credit
+  - Jewel
+  - Supporter
   layers:
   - Default
   - TransparentFX

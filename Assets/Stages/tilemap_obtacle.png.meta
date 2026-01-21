@@ -1,10 +1,13 @@
 fileFormatVersion: 2
-guid: 146c1f3fb4c1f454a9add80b95413f9b
+guid: b96f1b550beecb24eb72e3138072f01d
 TextureImporter:
   internalIDToNameTable:
   - first:
-      213: 5611346359714183497
-    second: eden_tilemap_0
+      213: -896265335464631563
+    second: tilemap_dmg_0
+  - first:
+      213: 4838496946225392879
+    second: tilemap_dmg_1
   externalObjects: {}
   serializedVersion: 13
   mipmaps:
@@ -126,139 +129,7 @@ TextureImporter:
     serializedVersion: 2
     sprites:
     - serializedVersion: 2
-      name: eden_tilemap_0
-      rect:
-        serializedVersion: 2
-        x: 0
-        y: 192
-        width: 96
-        height: 96
-      alignment: 0
-      pivot: {x: 0.5, y: 0.5}
-      border: {x: 0, y: 0, z: 0, w: 0}
-      customData: 
-      outline: []
-      physicsShape: []
-      tessellationDetail: -1
-      bones: []
-      spriteID: 949f172b8c18fdd40800000000000000
-      internalID: 5611346359714183497
-      vertices: []
-      indices: 
-      edges: []
-      weights: []
-    - serializedVersion: 2
-      name: eden_tilemap_1
-      rect:
-        serializedVersion: 2
-        x: 96
-        y: 192
-        width: 96
-        height: 96
-      alignment: 0
-      pivot: {x: 0.5, y: 0.5}
-      border: {x: 0, y: 0, z: 0, w: 0}
-      customData: 
-      outline: []
-      physicsShape: []
-      tessellationDetail: 0
-      bones: []
-      spriteID: 5744f6c4c0bbc804e84d7f9419b6bf28
-      internalID: -618818950
-      vertices: []
-      indices: 
-      edges: []
-      weights: []
-    - serializedVersion: 2
-      name: eden_tilemap_2
-      rect:
-        serializedVersion: 2
-        x: 192
-        y: 192
-        width: 96
-        height: 96
-      alignment: 0
-      pivot: {x: 0.5, y: 0.5}
-      border: {x: 0, y: 0, z: 0, w: 0}
-      customData: 
-      outline: []
-      physicsShape: []
-      tessellationDetail: 0
-      bones: []
-      spriteID: 9c876013796be8b4095e33ee4dd34482
-      internalID: -1703022346
-      vertices: []
-      indices: 
-      edges: []
-      weights: []
-    - serializedVersion: 2
-      name: eden_tilemap_3
-      rect:
-        serializedVersion: 2
-        x: 0
-        y: 96
-        width: 96
-        height: 96
-      alignment: 0
-      pivot: {x: 0.5, y: 0.5}
-      border: {x: 0, y: 0, z: 0, w: 0}
-      customData: 
-      outline: []
-      physicsShape: []
-      tessellationDetail: 0
-      bones: []
-      spriteID: 56e71dca51843484badb12e02f795cf1
-      internalID: 1030907441
-      vertices: []
-      indices: 
-      edges: []
-      weights: []
-    - serializedVersion: 2
-      name: eden_tilemap_4
-      rect:
-        serializedVersion: 2
-        x: 96
-        y: 96
-        width: 96
-        height: 96
-      alignment: 0
-      pivot: {x: 0.5, y: 0.5}
-      border: {x: 0, y: 0, z: 0, w: 0}
-      customData: 
-      outline: []
-      physicsShape: []
-      tessellationDetail: 0
-      bones: []
-      spriteID: 60c1c180f2eb6004688b5ae05c218ead
-      internalID: 194590634
-      vertices: []
-      indices: 
-      edges: []
-      weights: []
-    - serializedVersion: 2
-      name: eden_tilemap_5
-      rect:
-        serializedVersion: 2
-        x: 192
-        y: 96
-        width: 96
-        height: 96
-      alignment: 0
-      pivot: {x: 0.5, y: 0.5}
-      border: {x: 0, y: 0, z: 0, w: 0}
-      customData: 
-      outline: []
-      physicsShape: []
-      tessellationDetail: 0
-      bones: []
-      spriteID: 9871d1cfddc26984689625be8b9f1d59
-      internalID: -1739700722
-      vertices: []
-      indices: 
-      edges: []
-      weights: []
-    - serializedVersion: 2
-      name: eden_tilemap_6
+      name: tilemap_obtacle_0
       rect:
         serializedVersion: 2
         x: 0
@@ -273,14 +144,14 @@ TextureImporter:
       physicsShape: []
       tessellationDetail: 0
       bones: []
-      spriteID: 96ea550713fea1f49a467b02a920354f
-      internalID: -2041306109
+      spriteID: 38a254e874d188a4689e4138b01a7cd1
+      internalID: 4703781
       vertices: []
       indices: 
       edges: []
       weights: []
     - serializedVersion: 2
-      name: eden_tilemap_7
+      name: tilemap_obtacle_1
       rect:
         serializedVersion: 2
         x: 96
@@ -295,30 +166,8 @@ TextureImporter:
       physicsShape: []
       tessellationDetail: 0
       bones: []
-      spriteID: 3f187ce62fdce6e42b4b420648c27c38
-      internalID: 957428915
-      vertices: []
-      indices: 
-      edges: []
-      weights: []
-    - serializedVersion: 2
-      name: eden_tilemap_8
-      rect:
-        serializedVersion: 2
-        x: 192
-        y: 0
-        width: 96
-        height: 96
-      alignment: 0
-      pivot: {x: 0.5, y: 0.5}
-      border: {x: 0, y: 0, z: 0, w: 0}
-      customData: 
-      outline: []
-      physicsShape: []
-      tessellationDetail: 0
-      bones: []
-      spriteID: 3324f3f193b49354f87d84cd85d4c83d
-      internalID: 1408050141
+      spriteID: 3d656d62a67a36644aec871cbb5f9b5d
+      internalID: -122424638
       vertices: []
       indices: 
       edges: []
@@ -327,7 +176,7 @@ TextureImporter:
     customData: 
     physicsShape: []
     bones: []
-    spriteID: 27e6aef908ea2b44a99aa86c40ced604
+    spriteID: c8ff07d28df4aa9489d6d81771647304
     internalID: 0
     vertices: []
     indices: 
@@ -339,15 +188,8 @@ TextureImporter:
       - key: SpriteEditor.SliceSettings
         value: '{"sliceOnImport":false,"gridCellCount":{"x":1.0,"y":1.0},"gridSpriteSize":{"x":96.0,"y":96.0},"gridSpriteOffset":{"x":0.0,"y":0.0},"gridSpritePadding":{"x":0.0,"y":0.0},"pivot":{"x":0.5,"y":0.5},"pivotPixels":{"x":0.0,"y":0.0},"autoSlicingMethod":0,"spriteAlignment":0,"pivotUnitMode":0,"slicingType":1,"keepEmptyRects":false,"isAlternate":false}'
     nameFileIdTable:
-      eden_tilemap_0: 5611346359714183497
-      eden_tilemap_1: -618818950
-      eden_tilemap_2: -1703022346
-      eden_tilemap_3: 1030907441
-      eden_tilemap_4: 194590634
-      eden_tilemap_5: -1739700722
-      eden_tilemap_6: -2041306109
-      eden_tilemap_7: 957428915
-      eden_tilemap_8: 1408050141
+      tilemap_obtacle_0: 4703781
+      tilemap_obtacle_1: -122424638
   mipmapLimitGroupName: 
   pSDRemoveMatte: 0
   userData: 

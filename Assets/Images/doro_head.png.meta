@@ -1,10 +1,10 @@
 fileFormatVersion: 2
-guid: 7d7ae7077a4e8b54abb5dc8aac674989
+guid: bfc92b6ed04753e498cb37634e17d7d7
 TextureImporter:
   internalIDToNameTable:
   - first:
-      213: 5529022320273088708
-    second: credit_0
+      213: -1140934855644019994
+    second: doro_head_0
   externalObjects: {}
   serializedVersion: 13
   mipmaps:
@@ -126,13 +126,13 @@ TextureImporter:
     serializedVersion: 2
     sprites:
     - serializedVersion: 2
-      name: credit_0
+      name: doro_head_0
       rect:
         serializedVersion: 2
         x: 0
         y: 0
-        width: 54
-        height: 50
+        width: 179
+        height: 130
       alignment: 0
       pivot: {x: 0, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
@@ -141,8 +141,8 @@ TextureImporter:
       physicsShape: []
       tessellationDetail: -1
       bones: []
-      spriteID: 4c0651b91880bbc40800000000000000
-      internalID: 5529022320273088708
+      spriteID: 6e20a713bc59a20f0800000000000000
+      internalID: -1140934855644019994
       vertices: []
       indices: 
       edges: []
@@ -161,7 +161,7 @@ TextureImporter:
     spriteCustomMetadata:
       entries: []
     nameFileIdTable:
-      credit_0: 5529022320273088708
+      doro_head_0: -1140934855644019994
   mipmapLimitGroupName: 
   pSDRemoveMatte: 0
   userData: 
