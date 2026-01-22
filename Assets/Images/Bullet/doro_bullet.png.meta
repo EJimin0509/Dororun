@@ -1,13 +1,10 @@
 fileFormatVersion: 2
-guid: a64cadd9aeda5a7488102b970cdcd58c
+guid: 706736c2193840540b12be6ad53ca12b
 TextureImporter:
   internalIDToNameTable:
   - first:
-      213: -5561502519705397518
-    second: eden_foreground_0
-  - first:
-      213: -6046439868908450511
-    second: eden_foreground_1
+      213: 1110087940858390627
+    second: doro_bullet_0
   externalObjects: {}
   serializedVersion: 13
   mipmaps:
@@ -129,13 +126,13 @@ TextureImporter:
     serializedVersion: 2
     sprites:
     - serializedVersion: 2
-      name: eden_foreground_0
+      name: doro_bullet_0
       rect:
         serializedVersion: 2
         x: 0
         y: 0
-        width: 682
-        height: 554
+        width: 32
+        height: 32
       alignment: 0
       pivot: {x: 0, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
@@ -144,30 +141,8 @@ TextureImporter:
       physicsShape: []
       tessellationDetail: -1
       bones: []
-      spriteID: 2f61587ace291d2b0800000000000000
-      internalID: -5561502519705397518
-      vertices: []
-      indices: 
-      edges: []
-      weights: []
-    - serializedVersion: 2
-      name: eden_foreground_1
-      rect:
-        serializedVersion: 2
-        x: 260
-        y: 534
-        width: 106
-        height: 46
-      alignment: 0
-      pivot: {x: 0, y: 0}
-      border: {x: 0, y: 0, z: 0, w: 0}
-      customData: 
-      outline: []
-      physicsShape: []
-      tessellationDetail: -1
-      bones: []
-      spriteID: 13dc3f189fab61ca0800000000000000
-      internalID: -6046439868908450511
+      spriteID: 3682f48c913d76f00800000000000000
+      internalID: 1110087940858390627
       vertices: []
       indices: 
       edges: []
@@ -186,8 +161,7 @@ TextureImporter:
     spriteCustomMetadata:
       entries: []
     nameFileIdTable:
-      eden_foreground_0: -5561502519705397518
-      eden_foreground_1: -6046439868908450511
+      doro_bullet_0: 1110087940858390627
   mipmapLimitGroupName: 
   pSDRemoveMatte: 0
   userData: 

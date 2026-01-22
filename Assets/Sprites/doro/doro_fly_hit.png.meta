@@ -1,0 +1,559 @@
+fileFormatVersion: 2
+guid: 5b4a308f423bd0b429ee60805721fffa
+TextureImporter:
+  internalIDToNameTable:
+  - first:
+      213: 382969208656846745
+    second: doro_fly_hit_0
+  - first:
+      213: 3257985258497871706
+    second: doro_fly_hit_1
+  - first:
+      213: -6629501565389937192
+    second: doro_fly_hit_2
+  - first:
+      213: -5487080468744412900
+    second: doro_fly_hit_3
+  - first:
+      213: -2899282219945304869
+    second: doro_fly_hit_4
+  - first:
+      213: 6566568720604322451
+    second: doro_fly_hit_5
+  - first:
+      213: 6824728645597187934
+    second: doro_fly_hit_6
+  - first:
+      213: 1313645724950063202
+    second: doro_fly_hit_7
+  - first:
+      213: 6627466817504585491
+    second: doro_fly_hit_8
+  - first:
+      213: -359611091423054347
+    second: doro_fly_hit_9
+  - first:
+      213: -5452296737047104823
+    second: doro_fly_hit_10
+  - first:
+      213: 2003287610576440399
+    second: doro_fly_hit_11
+  - first:
+      213: 4703151308831908649
+    second: doro_fly_hit_12
+  - first:
+      213: 1641407779270684081
+    second: doro_fly_hit_13
+  - first:
+      213: 1816399687010721179
+    second: doro_fly_hit_14
+  - first:
+      213: -3554429951075019577
+    second: doro_fly_hit_15
+  externalObjects: {}
+  serializedVersion: 13
+  mipmaps:
+    mipMapMode: 0
+    enableMipMap: 0
+    sRGBTexture: 1
+    linearTexture: 0
+    fadeOut: 0
+    borderMipMap: 0
+    mipMapsPreserveCoverage: 0
+    alphaTestReferenceValue: 0.5
+    mipMapFadeDistanceStart: 1
+    mipMapFadeDistanceEnd: 3
+  bumpmap:
+    convertToNormalMap: 0
+    externalNormalMap: 0
+    heightScale: 0.25
+    normalMapFilter: 0
+    flipGreenChannel: 0
+  isReadable: 0
+  streamingMipmaps: 0
+  streamingMipmapsPriority: 0
+  vTOnly: 0
+  ignoreMipmapLimit: 0
+  grayScaleToAlpha: 0
+  generateCubemap: 6
+  cubemapConvolution: 0
+  seamlessCubemap: 0
+  textureFormat: 1
+  maxTextureSize: 2048
+  textureSettings:
+    serializedVersion: 2
+    filterMode: 1
+    aniso: 1
+    mipBias: 0
+    wrapU: 1
+    wrapV: 1
+    wrapW: 1
+  nPOTScale: 0
+  lightmap: 0
+  compressionQuality: 50
+  spriteMode: 2
+  spriteExtrude: 1
+  spriteMeshType: 1
+  alignment: 0
+  spritePivot: {x: 0.5, y: 0.5}
+  spritePixelsToUnits: 100
+  spriteBorder: {x: 0, y: 0, z: 0, w: 0}
+  spriteGenerateFallbackPhysicsShape: 1
+  alphaUsage: 1
+  alphaIsTransparency: 1
+  spriteTessellationDetail: -1
+  textureType: 8
+  textureShape: 1
+  singleChannelComponent: 0
+  flipbookRows: 1
+  flipbookColumns: 1
+  maxTextureSizeSet: 0
+  compressionQualitySet: 0
+  textureFormatSet: 0
+  ignorePngGamma: 0
+  applyGammaDecoding: 0
+  swizzle: 50462976
+  cookieLightType: 0
+  platformSettings:
+  - serializedVersion: 4
+    buildTarget: DefaultTexturePlatform
+    maxTextureSize: 2048
+    resizeAlgorithm: 0
+    textureFormat: -1
+    textureCompression: 1
+    compressionQuality: 50
+    crunchedCompression: 0
+    allowsAlphaSplitting: 0
+    overridden: 0
+    ignorePlatformSupport: 0
+    androidETC2FallbackOverride: 0
+    forceMaximumCompressionQuality_BC6H_BC7: 0
+  - serializedVersion: 4
+    buildTarget: Standalone
+    maxTextureSize: 2048
+    resizeAlgorithm: 0
+    textureFormat: -1
+    textureCompression: 1
+    compressionQuality: 50
+    crunchedCompression: 0
+    allowsAlphaSplitting: 0
+    overridden: 0
+    ignorePlatformSupport: 0
+    androidETC2FallbackOverride: 0
+    forceMaximumCompressionQuality_BC6H_BC7: 0
+  - serializedVersion: 4
+    buildTarget: Android
+    maxTextureSize: 2048
+    resizeAlgorithm: 0
+    textureFormat: -1
+    textureCompression: 1
+    compressionQuality: 50
+    crunchedCompression: 0
+    allowsAlphaSplitting: 0
+    overridden: 0
+    ignorePlatformSupport: 0
+    androidETC2FallbackOverride: 0
+    forceMaximumCompressionQuality_BC6H_BC7: 0
+  - serializedVersion: 4
+    buildTarget: WebGL
+    maxTextureSize: 2048
+    resizeAlgorithm: 0
+    textureFormat: -1
+    textureCompression: 1
+    compressionQuality: 50
+    crunchedCompression: 0
+    allowsAlphaSplitting: 0
+    overridden: 0
+    ignorePlatformSupport: 0
+    androidETC2FallbackOverride: 0
+    forceMaximumCompressionQuality_BC6H_BC7: 0
+  spriteSheet:
+    serializedVersion: 2
+    sprites:
+    - serializedVersion: 2
+      name: doro_fly_hit_0
+      rect:
+        serializedVersion: 2
+        x: 42
+        y: 45
+        width: 259
+        height: 231
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 99f57e95774905500800000000000000
+      internalID: 382969208656846745
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: doro_fly_hit_1
+      rect:
+        serializedVersion: 2
+        x: 358
+        y: 45
+        width: 259
+        height: 231
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: a5f8930c450b63d20800000000000000
+      internalID: 3257985258497871706
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: doro_fly_hit_2
+      rect:
+        serializedVersion: 2
+        x: 674
+        y: 43
+        width: 260
+        height: 233
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 8d5690d63774ff3a0800000000000000
+      internalID: -6629501565389937192
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: doro_fly_hit_3
+      rect:
+        serializedVersion: 2
+        x: 990
+        y: 43
+        width: 260
+        height: 233
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: c11618ea269f9d3b0800000000000000
+      internalID: -5487080468744412900
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: doro_fly_hit_4
+      rect:
+        serializedVersion: 2
+        x: 1306
+        y: 49
+        width: 282
+        height: 227
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: bdcdd889e2ea3c7d0800000000000000
+      internalID: -2899282219945304869
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: doro_fly_hit_5
+      rect:
+        serializedVersion: 2
+        x: 1644
+        y: 49
+        width: 282
+        height: 227
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 39adfc0d573212b50800000000000000
+      internalID: 6566568720604322451
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: doro_fly_hit_6
+      rect:
+        serializedVersion: 2
+        x: 1982
+        y: 43
+        width: 260
+        height: 233
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: e5fc0415b8e46be50800000000000000
+      internalID: 6824728645597187934
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: doro_fly_hit_7
+      rect:
+        serializedVersion: 2
+        x: 2298
+        y: 43
+        width: 260
+        height: 233
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 268eb5ca3d10b3210800000000000000
+      internalID: 1313645724950063202
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: doro_fly_hit_8
+      rect:
+        serializedVersion: 2
+        x: 2614
+        y: 45
+        width: 260
+        height: 231
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 317ac0ae4fd79fb50800000000000000
+      internalID: 6627466817504585491
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: doro_fly_hit_9
+      rect:
+        serializedVersion: 2
+        x: 2930
+        y: 45
+        width: 260
+        height: 231
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 5f5307e1e97620bf0800000000000000
+      internalID: -359611091423054347
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: doro_fly_hit_10
+      rect:
+        serializedVersion: 2
+        x: 3246
+        y: 47
+        width: 259
+        height: 229
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 9c23942510d8554b0800000000000000
+      internalID: -5452296737047104823
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: doro_fly_hit_11
+      rect:
+        serializedVersion: 2
+        x: 3561
+        y: 47
+        width: 259
+        height: 229
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: f4c895bc77b1dcb10800000000000000
+      internalID: 2003287610576440399
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: doro_fly_hit_12
+      rect:
+        serializedVersion: 2
+        x: 3877
+        y: 55
+        width: 257
+        height: 221
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 923e6df6233f44140800000000000000
+      internalID: 4703151308831908649
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: doro_fly_hit_13
+      rect:
+        serializedVersion: 2
+        x: 4191
+        y: 55
+        width: 257
+        height: 221
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 1bdedfebda377c610800000000000000
+      internalID: 1641407779270684081
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: doro_fly_hit_14
+      rect:
+        serializedVersion: 2
+        x: 4505
+        y: 47
+        width: 260
+        height: 229
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: b9d976244e5253910800000000000000
+      internalID: 1816399687010721179
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: doro_fly_hit_15
+      rect:
+        serializedVersion: 2
+        x: 4822
+        y: 47
+        width: 260
+        height: 229
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 7c41a2baac02caec0800000000000000
+      internalID: -3554429951075019577
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    outline: []
+    customData: 
+    physicsShape: []
+    bones: []
+    spriteID: 
+    internalID: 0
+    vertices: []
+    indices: 
+    edges: []
+    weights: []
+    secondaryTextures: []
+    spriteCustomMetadata:
+      entries: []
+    nameFileIdTable:
+      doro_fly_hit_0: 382969208656846745
+      doro_fly_hit_1: 3257985258497871706
+      doro_fly_hit_10: -5452296737047104823
+      doro_fly_hit_11: 2003287610576440399
+      doro_fly_hit_12: 4703151308831908649
+      doro_fly_hit_13: 1641407779270684081
+      doro_fly_hit_14: 1816399687010721179
+      doro_fly_hit_15: -3554429951075019577
+      doro_fly_hit_2: -6629501565389937192
+      doro_fly_hit_3: -5487080468744412900
+      doro_fly_hit_4: -2899282219945304869
+      doro_fly_hit_5: 6566568720604322451
+      doro_fly_hit_6: 6824728645597187934
+      doro_fly_hit_7: 1313645724950063202
+      doro_fly_hit_8: 6627466817504585491
+      doro_fly_hit_9: -359611091423054347
+  mipmapLimitGroupName: 
+  pSDRemoveMatte: 0
+  userData: 
+  assetBundleName: 
+  assetBundleVariant: 

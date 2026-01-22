@@ -1,13 +1,10 @@
 fileFormatVersion: 2
-guid: a64cadd9aeda5a7488102b970cdcd58c
+guid: 7b178054175fe0e4482390a54923305a
 TextureImporter:
   internalIDToNameTable:
   - first:
-      213: -5561502519705397518
-    second: eden_foreground_0
-  - first:
-      213: -6046439868908450511
-    second: eden_foreground_1
+      213: -1314923570169941335
+    second: goal_0
   externalObjects: {}
   serializedVersion: 13
   mipmaps:
@@ -49,12 +46,12 @@ TextureImporter:
   nPOTScale: 0
   lightmap: 0
   compressionQuality: 50
-  spriteMode: 1
+  spriteMode: 2
   spriteExtrude: 1
   spriteMeshType: 1
   alignment: 0
   spritePivot: {x: 0.5, y: 0.5}
-  spritePixelsToUnits: 100
+  spritePixelsToUnits: 96
   spriteBorder: {x: 0, y: 0, z: 0, w: 0}
   spriteGenerateFallbackPhysicsShape: 1
   alphaUsage: 1
@@ -129,45 +126,45 @@ TextureImporter:
     serializedVersion: 2
     sprites:
     - serializedVersion: 2
-      name: eden_foreground_0
+      name: goal_0
       rect:
         serializedVersion: 2
         x: 0
-        y: 0
-        width: 682
-        height: 554
+        y: 96
+        width: 96
+        height: 96
       alignment: 0
-      pivot: {x: 0, y: 0}
+      pivot: {x: 0.5, y: 0.5}
       border: {x: 0, y: 0, z: 0, w: 0}
       customData: 
       outline: []
       physicsShape: []
       tessellationDetail: -1
       bones: []
-      spriteID: 2f61587ace291d2b0800000000000000
-      internalID: -5561502519705397518
+      spriteID: 9a27b3dcaf370cde0800000000000000
+      internalID: -1314923570169941335
       vertices: []
       indices: 
       edges: []
       weights: []
     - serializedVersion: 2
-      name: eden_foreground_1
+      name: goal_1
       rect:
         serializedVersion: 2
-        x: 260
-        y: 534
-        width: 106
-        height: 46
+        x: 0
+        y: 0
+        width: 96
+        height: 96
       alignment: 0
-      pivot: {x: 0, y: 0}
+      pivot: {x: 0.5, y: 0.5}
       border: {x: 0, y: 0, z: 0, w: 0}
       customData: 
       outline: []
       physicsShape: []
-      tessellationDetail: -1
+      tessellationDetail: 0
       bones: []
-      spriteID: 13dc3f189fab61ca0800000000000000
-      internalID: -6046439868908450511
+      spriteID: 20bf1ea1d70aa8e40b7c86917204c4a5
+      internalID: 128390952
       vertices: []
       indices: 
       edges: []
@@ -176,7 +173,7 @@ TextureImporter:
     customData: 
     physicsShape: []
     bones: []
-    spriteID: 5e97eb03825dee720800000000000000
+    spriteID: 4ef28dfa35303e5468329a8970d0ad28
     internalID: 0
     vertices: []
     indices: 
@@ -184,10 +181,12 @@ TextureImporter:
     weights: []
     secondaryTextures: []
     spriteCustomMetadata:
-      entries: []
+      entries:
+      - key: SpriteEditor.SliceSettings
+        value: '{"sliceOnImport":false,"gridCellCount":{"x":1.0,"y":1.0},"gridSpriteSize":{"x":96.0,"y":96.0},"gridSpriteOffset":{"x":0.0,"y":0.0},"gridSpritePadding":{"x":0.0,"y":0.0},"pivot":{"x":0.5,"y":0.5},"pivotPixels":{"x":0.0,"y":0.0},"autoSlicingMethod":0,"spriteAlignment":0,"pivotUnitMode":0,"slicingType":1,"keepEmptyRects":false,"isAlternate":false}'
     nameFileIdTable:
-      eden_foreground_0: -5561502519705397518
-      eden_foreground_1: -6046439868908450511
+      goal_0: -1314923570169941335
+      goal_1: 128390952
   mipmapLimitGroupName: 
   pSDRemoveMatte: 0
   userData: 

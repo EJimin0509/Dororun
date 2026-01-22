@@ -23,6 +23,8 @@ public class PlayerController : MonoBehaviour
     /// 일반 필드 정의
     /// </summary>
     private Rigidbody2D rb;
+    private bool isExiting = false; // 종료 애니메이션 여부
+    public float exitSpeed = 5f; // 종료 시 이동 속도
 
     void Awake()
     {
@@ -85,5 +87,28 @@ public class PlayerController : MonoBehaviour
         isInvincible = true;
         yield return new WaitForSeconds(invincibilityTime);
         isInvincible = false;
+    }
+
+    // 플레이어 종료 애니메이션 시작 메서드
+    public void StartExitAnimation()
+    {
+        isExiting = true;
+        rb.linearVelocity = new Vector2(exitSpeed, rb.linearVelocity.y); // 물리 초기화
+    }
+
+    void FixedUpdate()
+    {
+        if (isExiting)
+        {
+            rb.linearVelocity = new Vector2(exitSpeed, rb.linearVelocity.y); // 오른쪽으로 이동
+        }
+
+        if (transform.position.x > 10f)
+        {
+            isExiting = false; // 화면 밖으로 나가면 종료 애니메이션 중지
+
+            Object.FindAnyObjectByType<StageManager>().SwitchToBossBattle();
+            gameObject.SetActive(false); // 플레이어 비활성화
+        }
     }
 }
