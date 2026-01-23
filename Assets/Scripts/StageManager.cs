@@ -68,6 +68,6 @@ public class StageManager : MonoBehaviour
     public void SwitchToBossBattle()
     {
         Debug.Log("Switching to Boss Battle Scene...");
-        //UnityEngine.SceneManagement.SceneManager.LoadScene("Stage1_Boss");
+        UnityEngine.SceneManagement.SceneManager.LoadScene("Stage1_Boss");
     }
 }

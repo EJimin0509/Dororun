@@ -1,0 +1,151 @@
+using UnityEngine;
+using System.Collections;
+
+public class BossAI_Whale : MonoBehaviour
+{
+    /// <summary>
+    /// 보스 스탯
+    /// </summary>
+    [Header("Stats")]
+    public float maxHP = 500f;// 체력
+    private float currentHP; // 현재 체력
+    public float moveRange = 3f; // 움직일 범위
+    public float moveSpeed = 2f; // 움직일 속도
+    private Vector3 startPosition; // 시작 위치
+
+    /// <summary>
+    /// 보스 공격
+    /// </summary>
+    [Header("Attack Settings")]
+    public GameObject bossBulletPrefab; // 기본 탄환
+    public Transform shootPoint_bullet; // 탄환 발사 위치
+    public float fireInterval = 1.5f; // 탄환 발사 간격
+    public GameObject warningZonePrefab; // 경고 존 프리팹
+    public GameObject missilePrefab; // 미사일 프리팹
+    public float missileSpeed = 25f; // 미사일 속도
+    public GameObject mobPrefab; // 소환 몹 프리팹
+    public int maxMobCount = 2; // 최대 소환 몹 수
+
+    public BossHP_Bar hpBar; // Boss HP UI 연결
+
+    void Start()
+    {
+        currentHP = maxHP;
+        startPosition = transform.position; // 시작 위치 저장
+        InvokeRepeating("Pattern1", 2f, fireInterval); // 패턴1 시작
+        StartCoroutine(PatternManager()); // 패턴 관리
+
+    }
+
+    void Update()
+    {
+        // 체력이 0 초과일 때 움직임
+        if (currentHP > 0)
+        {
+            float newY = startPosition.y + Mathf.Sin(Time.time * moveSpeed) * moveRange;
+            transform.position = new Vector3(startPosition.x, newY, startPosition.z);
+        }
+    }
+
+    // 패턴 관리 코루틴
+    IEnumerator PatternManager()
+    {
+        while (currentHP > 0)
+        {
+            float hpPercent = currentHP / maxHP;
+
+            if (hpPercent <= 0.7f)
+            {
+                int randomPattern = Random.Range(0, 2); // 0 또는 1 선택
+                if (randomPattern == 0) StartMissileAttack();
+                else SpawnMob();
+
+                yield return new WaitForSeconds(4f); // 패턴 간 대기 시간
+            }
+            yield return new WaitForSeconds(1f); // 기본 대기 시간
+        }
+    }
+
+    // 패턴1: 기본 탄환 발사
+    void Pattern1()
+    {
+        Instantiate(bossBulletPrefab, shootPoint_bullet.position, Quaternion.identity); // 플레이어 방향으로 탄환 발사
+    }
+
+    // 패턴2: 미사일 공격
+    public void StartMissileAttack()
+    {
+        StartCoroutine(MissileSequence());
+    }
+
+    // 패턴3: 소환 몹 생성
+    public void SpawnMob()
+    {
+        int currentMobCount = GameObject.FindGameObjectsWithTag("Mob").Length; // 현재 소환된 몹 수 확인
+        if (currentMobCount < maxMobCount)
+        {
+            Vector3 spawnPosition = shootPoint_bullet.position; // 소환 위치 설정
+            GameObject mob = Instantiate(mobPrefab, spawnPosition, Quaternion.identity); // 몹 소환
+            
+            Rigidbody2D mobRb = mob.GetComponent<Rigidbody2D>();
+            if (mobRb != null)
+            {
+                mobRb.linearVelocity = Vector2.left * 2f; // 몹 이동 속도 설정
+            }
+        }
+    }
+
+    // 미사일 공격 시퀀스
+    IEnumerator MissileSequence()
+    {
+        // 공격 위치 결정
+        float targetY = GameObject.FindWithTag("Player").transform.position.y;
+        Vector3 spawnPos = new Vector3(0, targetY, 0);
+
+        // Warning Zone 생성
+        GameObject warning = Instantiate(warningZonePrefab, spawnPos, Quaternion.identity);
+        warning.transform.localScale = new Vector3(30f, 1f, 1f); // 경고 존 크기 조절
+
+        yield return new WaitForSeconds(1.5f); // 경고 존 표시 시간
+
+        // 경고창 제거 및 미사일 발사
+        Destroy(warning);
+        LaunchMissile(targetY);
+    }
+
+    // 미사일 발사
+    void LaunchMissile(float yPos)
+    {
+        // 보스 현재 위치에서 미사일 발사
+        Vector3 missileSpawnPos = new Vector3(transform.position.x, yPos, 0);
+        GameObject missile = Instantiate(missilePrefab, missileSpawnPos, Quaternion.identity); // 미사일 생성
+
+        missile.GetComponent<EnemyBullet>().speed = missileSpeed; // 미사일 속도 설정
+    }
+
+    // 보스 데미지 처리
+    public void TakeDamage(float damage)
+    {
+        currentHP -= damage;
+        Debug.Log($"Boss HP: {currentHP}/{maxHP}");
+
+        if (hpBar != null)
+        {
+            hpBar.UpdateHP(currentHP, maxHP);
+        }
+        
+
+        if (currentHP <= 0)
+        {
+            BossDeath();
+        }
+    }
+
+    // 보스 사망 처리
+    void BossDeath()
+    {
+        CancelInvoke(); // 모든 패턴 중지
+        Debug.Log("Boss Defeated!");
+        // 보스 사망 처리 로직 추가 (예: 애니메이션, 아이템 드롭 등)
+    }
+}

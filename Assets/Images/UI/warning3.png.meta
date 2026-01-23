@@ -1,10 +1,10 @@
 fileFormatVersion: 2
-guid: e4538c978509e244496c889379817423
+guid: 499c4e2853357614eb5bbbc45f870219
 TextureImporter:
   internalIDToNameTable:
   - first:
-      213: 7716895900453480576
-    second: whale_0
+      213: -287017782509207164
+    second: warning3_0
   externalObjects: {}
   serializedVersion: 13
   mipmaps:
@@ -46,7 +46,7 @@ TextureImporter:
   nPOTScale: 0
   lightmap: 0
   compressionQuality: 50
-  spriteMode: 2
+  spriteMode: 1
   spriteExtrude: 1
   spriteMeshType: 1
   alignment: 0
@@ -126,13 +126,13 @@ TextureImporter:
     serializedVersion: 2
     sprites:
     - serializedVersion: 2
-      name: whale_0
+      name: warning3_0
       rect:
         serializedVersion: 2
         x: 0
         y: 0
-        width: 590
-        height: 584
+        width: 278
+        height: 179
       alignment: 0
       pivot: {x: 0, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
@@ -141,8 +141,8 @@ TextureImporter:
       physicsShape: []
       tessellationDetail: -1
       bones: []
-      spriteID: 088a2338febe71b60800000000000000
-      internalID: 7716895900453480576
+      spriteID: 4818155f8de440cf0800000000000000
+      internalID: -287017782509207164
       vertices: []
       indices: 
       edges: []
@@ -151,7 +151,7 @@ TextureImporter:
     customData: 
     physicsShape: []
     bones: []
-    spriteID: 
+    spriteID: 5e97eb03825dee720800000000000000
     internalID: 0
     vertices: []
     indices: 
@@ -161,7 +161,7 @@ TextureImporter:
     spriteCustomMetadata:
       entries: []
     nameFileIdTable:
-      whale_0: 7716895900453480576
+      warning3_0: -287017782509207164
   mipmapLimitGroupName: 
   pSDRemoveMatte: 0
   userData: 

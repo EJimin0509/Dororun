@@ -10,6 +10,8 @@ TagManager:
   - Credit
   - Jewel
   - Supporter
+  - Boss
+  - Mob
   layers:
   - Default
   - TransparentFX
@@ -55,6 +57,9 @@ TagManager:
     locked: 0
   - name: Foreground
     uniqueID: 2474047241
+    locked: 0
+  - name: Nearground
+    uniqueID: 972588521
     locked: 0
   m_RenderingLayers:
   - Default

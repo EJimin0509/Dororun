@@ -18,6 +18,19 @@ public class Bullet : MonoBehaviour
     // 충돌 처리
     private void OnTriggerEnter2D(Collider2D other)
     {
-        Destroy(gameObject); // 충돌 시 총알 제거
+        if (other.CompareTag("Mob") || other.CompareTag("Boss"))
+        {
+            BossAI_Whale boss = other.GetComponent<BossAI_Whale>();
+            if (boss != null)
+            {
+                boss.TakeDamage(5f); // 보스에게 10의 데미지 적용
+            }
+            MobAI mob = other.GetComponent<MobAI>();
+            if (mob != null)
+            {
+                mob.TakeDamage(5f);
+            }
+            Destroy(gameObject); // 충돌 시 총알 제거
+        }     
     }
 }
