@@ -1,6 +1,8 @@
 using UnityEngine;
 using UnityEngine.UI;
 using UnityEngine.Tilemaps;
+using System.Collections;
+using System.Collections.Generic;
 
 public class StageManager : MonoBehaviour
 {
@@ -13,12 +15,28 @@ public class StageManager : MonoBehaviour
     public WorldScroller[] scrollers; // 모든 배경/타일맵 스크롤러 배열
     public PlayerController player; // 플레이어 컨트롤러 참조
 
+    [Header("UI References")]
+    public GameObject countdownPanel;
+    public GameObject obj3;
+    public GameObject obj2;
+    public GameObject obj1;
+    public GameObject objGO;
+
     private float startX; // 시작 위치 X 좌표
     private bool isGoalReached = false; // 목표 도달 여부
     private bool isSequenceStarted = false; // 시퀀스 시작 여부
 
     void Start()
     {
+        Time.timeScale = 0f; // 시간 정지
+
+        // 카운트다운 오브젝트 초기화
+        obj3.SetActive(false);
+        obj2.SetActive(false);
+        obj1.SetActive(false);
+        objGO.SetActive(false);
+
+        StartCoroutine(StartCountdown()); // 카운트다운 시작
         float goalDistance = CalculateMapLength(); // 맵 길이 계산
         if (worldTransform != null)
         {
@@ -27,6 +45,33 @@ public class StageManager : MonoBehaviour
             distanceSlider.maxValue = goalDistance;
             distanceSlider.value = 0;
         }
+    }
+
+    // 카운트다운
+    IEnumerator StartCountdown()
+    {
+        countdownPanel.SetActive(true);
+        // 3
+        obj3.SetActive(true);
+        yield return new WaitForSecondsRealtime(1f);
+        obj3.SetActive(false);
+        // 2
+        obj2.SetActive(true);
+        yield return new WaitForSecondsRealtime(1f);
+        obj2.SetActive(false);
+        // 1
+        obj1.SetActive(true);
+        yield return new WaitForSecondsRealtime(1f);
+        obj1.SetActive(false);
+        // GO
+        objGO.SetActive(true);
+        yield return new WaitForSecondsRealtime(1f);
+        objGO.SetActive(false);
+
+        countdownPanel.SetActive(false);
+
+        Time.timeScale = 1f; // 재생
+
     }
 
     // 맵 길이 계산 메서드

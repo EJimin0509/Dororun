@@ -146,6 +146,15 @@ public class BossAI_Whale : MonoBehaviour
     {
         CancelInvoke(); // 모든 패턴 중지
         Debug.Log("Boss Defeated!");
-        // 보스 사망 처리 로직 추가 (예: 애니메이션, 아이템 드롭 등)
+        
+        // 승리 로직
+        if (RewardManager.Instance != null)
+        {
+            RewardManager.Instance.FinalizeReward(true);
+        }
+        else
+        {
+            Debug.Log("Couldnt find RewardManager");
+        }
     }
 }

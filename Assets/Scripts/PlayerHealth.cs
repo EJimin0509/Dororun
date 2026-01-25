@@ -16,8 +16,13 @@ public class PlayerHealth : MonoBehaviour
     [Header("UI Reference")]
     public HP_Bar playerHPUI; // UI 연결
 
+    private Animator anim;
+    private SpriteRenderer spriteRenderer;
+
     void Start()
     {
+        anim = GetComponentInChildren<Animator>();
+        spriteRenderer = GetComponentInChildren<SpriteRenderer>();
         playerHPUI.UpdateHP(CurrentHP, maxHP);
     }
 
@@ -28,6 +33,14 @@ public class PlayerHealth : MonoBehaviour
         CurrentHP = Mathf.Clamp(CurrentHP, 0, maxHP);
 
         playerHPUI.UpdateHP(CurrentHP, maxHP); // UI 갱신
+
+        if (anim != null) 
+        {
+            anim.SetTrigger("OnHit");
+            anim.SetBool("IsInvincible", true);
+        }
+
+        StartCoroutine(InvincibilityRoutine()); // 무적 상태
 
         if (CurrentHP <= 0) Die(); // 사망
     }
@@ -45,22 +58,18 @@ public class PlayerHealth : MonoBehaviour
         if (collision.gameObject.CompareTag("Obstacle") && !isInvincible)
         {
             TakeDamage(10); // Obstacle 충돌
-            StartCoroutine(InvincibilityRoutine()); // 무적 상태
         }
         else if (collision.gameObject.CompareTag("FallZone") && !isInvincible)
         {
             TakeDamage(10); // FallZone 충돌
-            StartCoroutine(InvincibilityRoutine()); // 무적 상태
         }
         else if (collision.gameObject.CompareTag("Bullet") && !isInvincible)
         {
             TakeDamage(10); // Bullet 충돌
-            StartCoroutine(InvincibilityRoutine()); // 무적 상태
         }
         else if (collision.gameObject.CompareTag("Missile") && !isInvincible)
         {
             TakeDamage(25); // Missile 충돌
-            StartCoroutine(InvincibilityRoutine()); // 무적 상태
         }
     }
 
@@ -73,6 +82,12 @@ public class PlayerHealth : MonoBehaviour
             Debug.Log("Invincible true");
             yield return new WaitForSeconds(invincibilityTime);
             isInvincible = false;
+
+            isInvincible = false;
+            if (anim != null)
+            {
+                anim.SetBool("IsInvincible", false);
+            }
             Debug.Log("Invincible false");
         }
     }

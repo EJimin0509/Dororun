@@ -23,7 +23,7 @@ public class Bullet : MonoBehaviour
             BossAI_Whale boss = other.GetComponent<BossAI_Whale>();
             if (boss != null)
             {
-                boss.TakeDamage(5f); // 보스에게 10의 데미지 적용
+                boss.TakeDamage(5f); // 보스에게 5의 데미지 적용
             }
             MobAI mob = other.GetComponent<MobAI>();
             if (mob != null)

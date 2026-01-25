@@ -1,5 +1,6 @@
 using UnityEngine;
 using System.Collections.Generic;
+using UnityEngine.SceneManagement;
 
 public class RewardManager : MonoBehaviour
 {
@@ -13,8 +14,19 @@ public class RewardManager : MonoBehaviour
 
     void Awake()
     {
-        if (Instance == null) Instance = this;
+        if (Instance == null)
+        {
+            Instance = this;
+            DontDestroyOnLoad(gameObject);
+        } 
         else Destroy(gameObject);
+    }
+
+    public void ResetStageData()
+    {
+        // 기록 초기화
+        currentCredit = 0;
+        currentJewel = 0;
     }
 
     // 아이템 획득 시 호출
@@ -26,7 +38,7 @@ public class RewardManager : MonoBehaviour
             case "Credit":
                 currentCredit++; break;
             case "Jewel":
-                currentCredit--; break;
+                currentCredit++; break;
             case "Supoorter":
                 if (!string.IsNullOrEmpty(supporterID) && !collectedSupporterIDs.Contains(supporterID))
                 {
@@ -65,5 +77,20 @@ public class RewardManager : MonoBehaviour
 
         PlayerPrefs.Save();
         Debug.Log($"result: {isVictory}, credit: {finalCredit}, jewel: {finalJewel}");
+    }
+
+    private void OnEnable()
+    {
+        SceneManager.sceneLoaded += OnSceneLoaded;// 씬 로드 시 실행
+    }
+
+    void OnDisable()
+    {
+        SceneManager.sceneLoaded -= OnSceneLoaded; // 스크립트 비활성화 시 해제
+    }
+
+    void OnSceneLoaded(Scene scene, LoadSceneMode mode)
+    {
+        resultUI = GameObject.FindFirstObjectByType<ResultUI>(); // 현재 씬의 ResultUI 연결
     }
 }

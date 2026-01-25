@@ -27,6 +27,12 @@ public class EnemyBullet : MonoBehaviour
         {
             Debug.Log("Player hit by enemy bullet!");
             Destroy(gameObject); // 충돌 시 총알 제거
+
+            PlayerHealth player = other.GetComponent<PlayerHealth>(); // HP 연결
+            if (player != null)
+            {
+                player.TakeDamage(10);
+            }
         }
     }
 }
