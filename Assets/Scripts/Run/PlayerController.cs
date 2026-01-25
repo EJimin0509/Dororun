@@ -11,13 +11,6 @@ public class PlayerController : MonoBehaviour
     private int jumpCount = 0; // 점프 횟수
     public float fallMultiplier = 6f; // 낙하 가속도 배율
     private bool isGrounded;
-    
-    /// <summary>
-    /// PC의 상태 필드 정의
-    /// </summary>
-    [Header("Status")]
-    public float invincibilityTime = 1.5f; // 무적 시간
-    private bool isInvincible = false; // 무적 여부
 
     /// <summary>
     /// 일반 필드 정의
@@ -62,31 +55,12 @@ public class PlayerController : MonoBehaviour
             isGrounded = true;
             jumpCount = 0; // 지면에 닿으면 점프 횟수 초기화
         }
-        // 장애물과 충돌
-        if (collision.gameObject.CompareTag("Obstacle") && !isInvincible)
-        {
-            //TakeDamage();
-        }
         // falling off the platform
         if (collision.gameObject.CompareTag("FallZone"))
         {
-            //TakeDamage();
             transform.position = new Vector2(-7f, 0.5f); // 떨어졌을 시, 복귀
             rb.linearVelocity = Vector2.zero; // 속도 초기화
         }
-    }
-    // 대미지 처리 메서드
-    void TakeDamage()
-    {
-        Debug.Log("Hit by obstacle!");
-        StartCoroutine(InvincibilityRoutine());
-    }
-    // 무적 상태 처리 코루틴
-    System.Collections.IEnumerator InvincibilityRoutine()
-    {
-        isInvincible = true;
-        yield return new WaitForSeconds(invincibilityTime);
-        isInvincible = false;
     }
 
     // 플레이어 종료 애니메이션 시작 메서드

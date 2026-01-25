@@ -11,6 +11,7 @@ public class MobAI : MonoBehaviour
     private float currentHP; // 현재 체력
     private SpriteRenderer spriteRenderer; // 스프라이트 렌더러 참조
     private Color originalColor; // 원래 색상 저장
+    public HP_Bar mobHPUI; // HP UI 참조
 
     void Start()
     {
@@ -48,22 +49,12 @@ public class MobAI : MonoBehaviour
     public void TakeDamage(float damage)
     {
         currentHP -= damage;
-
-        // 피격 효과
-        StopCoroutine("HitFlash");
-        StartCoroutine("HitFlash");
+        mobHPUI.UpdateHP(currentHP, maxHP);
 
         if(currentHP <= 0)
         {
             Die(); // 체력이 0 이하가 되면 몹 제거
         }
-    }
-
-    IEnumerable HitFlash()
-    {
-        spriteRenderer.color = Color.red; // 피격 시 빨간색으로 변경
-        yield return new WaitForSeconds(0.1f);
-        spriteRenderer.color = originalColor; // 원래 색상으로 복원
     }
 
     void Die()

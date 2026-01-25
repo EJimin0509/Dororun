@@ -26,7 +26,7 @@ public class BossAI_Whale : MonoBehaviour
     public GameObject mobPrefab; // 소환 몹 프리팹
     public int maxMobCount = 2; // 최대 소환 몹 수
 
-    public BossHP_Bar hpBar; // Boss HP UI 연결
+    public HP_Bar hpBar; // Boss HP UI 연결
 
     void Start()
     {

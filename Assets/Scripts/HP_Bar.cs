@@ -1,8 +1,7 @@
 using UnityEngine;
 using UnityEngine.UI;
-using TMPro;
 
-public class BossHP_Bar : MonoBehaviour
+public class HP_Bar : MonoBehaviour
 {
     public Image whiteFill; // 현재 체력(흰색)
     public Image redBuffer; // 대미지 잔상(빨간색)

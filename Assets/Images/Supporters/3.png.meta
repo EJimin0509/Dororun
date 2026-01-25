@@ -1,10 +1,10 @@
 fileFormatVersion: 2
-guid: 55907d421c64def4a9a222e6804d45b4
+guid: 0193f90b81fcf9f49903f92c6213b273
 TextureImporter:
   internalIDToNameTable:
   - first:
-      213: 1031126873552901195
-    second: rapi_0
+      213: 7016379993078777872
+    second: houngbuk_0
   externalObjects: {}
   serializedVersion: 13
   mipmaps:
@@ -46,7 +46,7 @@ TextureImporter:
   nPOTScale: 0
   lightmap: 0
   compressionQuality: 50
-  spriteMode: 2
+  spriteMode: 1
   spriteExtrude: 1
   spriteMeshType: 1
   alignment: 0
@@ -126,13 +126,13 @@ TextureImporter:
     serializedVersion: 2
     sprites:
     - serializedVersion: 2
-      name: rapi_0
+      name: houngbuk_0
       rect:
         serializedVersion: 2
-        x: 3
-        y: 6
-        width: 188
-        height: 177
+        x: 13
+        y: 8
+        width: 169
+        height: 176
       alignment: 0
       pivot: {x: 0, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
@@ -141,8 +141,8 @@ TextureImporter:
       physicsShape: []
       tessellationDetail: -1
       bones: []
-      spriteID: b44da78ad6c4f4e00800000000000000
-      internalID: 1031126873552901195
+      spriteID: 0184e98ed603f5160800000000000000
+      internalID: 7016379993078777872
       vertices: []
       indices: 
       edges: []
@@ -151,7 +151,7 @@ TextureImporter:
     customData: 
     physicsShape: []
     bones: []
-    spriteID: 
+    spriteID: 5e97eb03825dee720800000000000000
     internalID: 0
     vertices: []
     indices: 
@@ -161,7 +161,7 @@ TextureImporter:
     spriteCustomMetadata:
       entries: []
     nameFileIdTable:
-      rapi_0: 1031126873552901195
+      houngbuk_0: 7016379993078777872
   mipmapLimitGroupName: 
   pSDRemoveMatte: 0
   userData: 

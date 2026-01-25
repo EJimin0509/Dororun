@@ -12,6 +12,8 @@ TagManager:
   - Supporter
   - Boss
   - Mob
+  - Missile
+  - Bullet
   layers:
   - Default
   - TransparentFX
