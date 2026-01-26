@@ -29,6 +29,8 @@ public class PlayerHealth : MonoBehaviour
     // 대미지 처리 메서드
     public void TakeDamage(int damage)
     {
+        if (isInvincible) return; // 무적 중 실행하지 않음
+
         CurrentHP -= damage;
         CurrentHP = Mathf.Clamp(CurrentHP, 0, maxHP);
 

@@ -38,7 +38,7 @@ public class RewardManager : MonoBehaviour
             case "Credit":
                 currentCredit++; break;
             case "Jewel":
-                currentCredit++; break;
+                currentJewel++; break;
             case "Supoorter":
                 if (!string.IsNullOrEmpty(supporterID) && !collectedSupporterIDs.Contains(supporterID))
                 {

@@ -170,3 +170,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: Assembly-CSharp::EnemyBullet
   speed: 10
+  type: 1
+  isExplosive: 0
+  explodeTiggerName: OnExplode
+  explosionDelay: 0.5
