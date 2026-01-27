@@ -183,7 +183,7 @@ MonoBehaviour:
   speed: 10
   type: 2
   isExplosive: 0
-  explodeTiggerName: OnExplode
+  explodeTriggerName: OnExplosion
   explosionDelay: 0.5
 --- !u!95 &817158523006528452
 Animator:

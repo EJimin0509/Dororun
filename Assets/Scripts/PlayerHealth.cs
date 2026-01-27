@@ -35,6 +35,7 @@ public class PlayerHealth : MonoBehaviour
         CurrentHP = Mathf.Clamp(CurrentHP, 0, maxHP);
 
         playerHPUI.UpdateHP(CurrentHP, maxHP); // UI °»½Å
+        Debug.Log($"dmg: {damage}, HP: {CurrentHP}/{maxHP}");
 
         if (anim != null) 
         {

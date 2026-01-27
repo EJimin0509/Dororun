@@ -26,7 +26,27 @@ public class BossAI_Whale : MonoBehaviour
     public GameObject mobPrefab; // 소환 몹 프리팹
     public int maxMobCount = 2; // 최대 소환 몹 수
 
+    /// <summary>
+    /// 피격 이펙트
+    /// </summary>
+    [Header("Hit Effect")]
+    public float flashDuration = 0.1f; // 이펙트 시간
+    public Color hitColor; // 피격 색
+    private SpriteRenderer spriteRenderer; // 스프라이트 참조
+    private Color originalColor; // 원래 색
+    private Coroutine hitCoruotine; // 이팩트 코루틴
+
+    /// <summary>
+    /// HP UI
+    /// </summary>
+    [Header("HP UI")]
     public HP_Bar hpBar; // Boss HP UI 연결
+
+    private void Awake()
+    {
+        spriteRenderer = GetComponent<SpriteRenderer>();
+        originalColor = spriteRenderer.color; // 현재 스프라이트 컬러 저장
+    }
 
     void Start()
     {
@@ -127,18 +147,31 @@ public class BossAI_Whale : MonoBehaviour
     public void TakeDamage(float damage)
     {
         currentHP -= damage;
-        Debug.Log($"Boss HP: {currentHP}/{maxHP}");
+        //Debug.Log($"Boss HP: {currentHP}/{maxHP}");
 
+        // hp UI 로직
         if (hpBar != null)
         {
             hpBar.UpdateHP(currentHP, maxHP);
         }
-        
 
+        // 피격 이팩트 로직
+        if (hitCoruotine != null) StopCoroutine(hitCoruotine);
+        hitCoruotine = StartCoroutine(HitFlashRoutine());
+
+        // 보스 사망
         if (currentHP <= 0)
         {
             BossDeath();
         }
+    }
+
+    // 이팩트 코루틴
+    IEnumerator HitFlashRoutine()
+    {
+        spriteRenderer.color = hitColor;
+        yield return new WaitForSeconds(flashDuration);
+        spriteRenderer.color = originalColor;
     }
 
     // 보스 사망 처리

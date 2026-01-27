@@ -60,7 +60,16 @@ public class EnemyBullet : MonoBehaviour
             PlayerHealth player = other.GetComponent<PlayerHealth>(); // HP 연결
             if (player != null)
             {
-                player.TakeDamage(10);
+                // 대미지 처리
+                switch (type)
+                {
+                    case BulletType.Bullet:
+                        player.TakeDamage(10); break;
+                    case BulletType.Missile:
+                        player.TakeDamage(25); break;
+                    default:
+                        player.TakeDamage(10); break;
+                }
             }
 
             HandleDestruction();    
@@ -85,12 +94,17 @@ public class EnemyBullet : MonoBehaviour
     // 폭발 후 삭제 코루틴
     IEnumerator ExplodeAndDestroy()
     {
-        isExploding = true;
-        if (col != null) col.enabled = false;
+        isExploding = true; // 폭발 시작
+        if (col != null) col.enabled = false; // 통과 가능하게
 
-        if (anim != null) anim.SetTrigger(explodeTriggerName);
+        if (anim != null)
+        {
+            anim.SetTrigger(explodeTriggerName);
+            Debug.Log("Explosion!");
+        }
 
         yield return new WaitForSeconds(explosionDelay);
         Destroy(gameObject);
+        isExploding = false;
     }
 }

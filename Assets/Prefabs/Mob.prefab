@@ -187,6 +187,8 @@ MonoBehaviour:
   bulletPrefab: {fileID: 4880460253122807480, guid: fdff04b8c3beddf45a840b074cd05bd7, type: 3}
   maxHP: 20
   mobHPUI: {fileID: 7256616533913348081}
+  flashDuration: 0.1
+  hitColor: {r: 1, g: 0.57254905, b: 0.57254905, a: 1}
 --- !u!50 &-6810079859373246200
 Rigidbody2D:
   serializedVersion: 5

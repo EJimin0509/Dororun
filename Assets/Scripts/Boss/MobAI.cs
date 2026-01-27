@@ -9,9 +9,17 @@ public class MobAI : MonoBehaviour
     private Transform playerTransform; // 플레이어 위치 참조
     public float maxHP = 20f;// 최대 체력
     private float currentHP; // 현재 체력
-    private SpriteRenderer spriteRenderer; // 스프라이트 렌더러 참조
-    private Color originalColor; // 원래 색상 저장
     public HP_Bar mobHPUI; // HP UI 참조
+
+    /// <summary>
+    /// 피격 이펙트
+    /// </summary>
+    [Header("Hit Effect")]
+    public float flashDuration = 0.1f; // 이펙트 시간
+    public Color hitColor; // 피격 색
+    private SpriteRenderer spriteRenderer; // 스프라이트 참조
+    private Color originalColor; // 원래 색
+    private Coroutine hitCoruotine; // 이팩트 코루틴
 
     void Start()
     {
@@ -51,10 +59,22 @@ public class MobAI : MonoBehaviour
         currentHP -= damage;
         mobHPUI.UpdateHP(currentHP, maxHP);
 
-        if(currentHP <= 0)
+        // 피격 이팩트 로직
+        if (hitCoruotine != null) StopCoroutine(hitCoruotine);
+        hitCoruotine = StartCoroutine(HitFlashRoutine());
+
+        if (currentHP <= 0)
         {
             Die(); // 체력이 0 이하가 되면 몹 제거
         }
+    }
+
+    // 이팩트 코루틴
+    IEnumerator HitFlashRoutine()
+    {
+        spriteRenderer.color = hitColor;
+        yield return new WaitForSeconds(flashDuration);
+        spriteRenderer.color = originalColor;
     }
 
     void Die()
