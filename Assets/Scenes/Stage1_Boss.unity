@@ -2442,7 +2442,7 @@ MonoBehaviour:
   mobPrefab: {fileID: 2223799645650826339, guid: e2146df113912fb4aba80f11e4eb83a2, type: 3}
   maxMobCount: 2
   flashDuration: 0.1
-  hitColor: {r: 1, g: 0.21568629, b: 0.21568629, a: 1}
+  hitColor: {r: 1, g: 0.5707547, b: 0.5707547, a: 1}
   hpBar: {fileID: 1326964547}
 --- !u!61 &1452819996
 BoxCollider2D:
