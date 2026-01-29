@@ -21,11 +21,25 @@ public class MobAI : MonoBehaviour
     private Color originalColor; // 원래 색
     private Coroutine hitCoruotine; // 이팩트 코루틴
 
+    /// <summary>
+    /// 죽을 시 폭발 셋팅
+    /// </summary>
+    [Header("Die Animaion Settings")]
+    public string explodeTriggerName = "isDead"; // 애니메이션 트리거
+    public float explosionDelay = 0.5f; // 폭발 애니메이션 표시 시간
+
+    private Animator anim; // 애니메이션 참조
+    private Collider2D col; // 콜라이더
+    private bool isExploding = false; //폭발 여부 체크, 정지를 위함
+
     void Start()
     {
         currentHP = maxHP;
         spriteRenderer = GetComponent<SpriteRenderer>();
         originalColor = spriteRenderer.color;
+
+        anim = GetComponent<Animator>();
+        col = GetComponent<Collider2D>();
 
         playerTransform = GameObject.FindGameObjectWithTag("Player").transform;
         InvokeRepeating("ShootAtPlayer", 1f, shootingInterval); // 일정 간격으로 탄환 발사
@@ -65,7 +79,7 @@ public class MobAI : MonoBehaviour
 
         if (currentHP <= 0)
         {
-            Die(); // 체력이 0 이하가 되면 몹 제거
+            StartCoroutine(DieRoutine()); // 사망 루틴
         }
     }
 
@@ -77,10 +91,17 @@ public class MobAI : MonoBehaviour
         spriteRenderer.color = originalColor;
     }
 
-    void Die()
+    IEnumerator DieRoutine()
     {
-        // 사망 이펙트 추가 가능
+        if (col != null) col.enabled = false; // 통과 가능하게
 
+        if (anim != null)
+        {
+            anim.SetTrigger(explodeTriggerName);
+            Debug.Log("Explosion!");
+        }
+
+        yield return new WaitForSeconds(explosionDelay);
         Destroy(gameObject); // 몹 제거
     }
 }

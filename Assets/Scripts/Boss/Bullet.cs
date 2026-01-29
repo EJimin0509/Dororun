@@ -4,6 +4,7 @@ public class Bullet : MonoBehaviour
 {
     public float speed = 15f; // 총알 속도
     public float lifeTime = 2f; // 총알 생존 시간
+    public float dmg; // 총알 대미지
 
     void Start()
     {
@@ -23,12 +24,12 @@ public class Bullet : MonoBehaviour
             BossAI_Whale boss = other.GetComponent<BossAI_Whale>();
             if (boss != null)
             {
-                boss.TakeDamage(5f); // 보스에게 5의 데미지 적용
+                boss.TakeDamage(dmg); // 보스에게 5의 데미지 적용
             }
             MobAI mob = other.GetComponent<MobAI>();
             if (mob != null)
             {
-                mob.TakeDamage(5f);
+                mob.TakeDamage(dmg);
             }
             Destroy(gameObject); // 충돌 시 총알 제거
         }     

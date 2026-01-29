@@ -42,6 +42,15 @@ public class BossAI_Whale : MonoBehaviour
     [Header("HP UI")]
     public HP_Bar hpBar; // Boss HP UI 연결
 
+    /// <summary>
+    /// 패배씬 세팅
+    /// </summary>
+    [Header("DefeatSettings")]
+    public float targetY; // 가라앉는 위치
+    public float sinkSpeed; // 가라앉는 속도
+    public float explosionRepeatCount; // 폭발 애니메이션 반복 횟수
+    public GameObject defeatEffectPrefab; // 패배 이펙트를 담은 부모 프리팹
+
     private void Awake()
     {
         spriteRenderer = GetComponent<SpriteRenderer>();
@@ -179,7 +188,52 @@ public class BossAI_Whale : MonoBehaviour
     {
         CancelInvoke(); // 모든 패턴 중지
         Debug.Log("Boss Defeated!");
-        
+        StartCoroutine(DefeatRoutione()); // 패배씬 코루틴 시작
+    }
+
+    // 패배씬 코루틴
+    IEnumerator DefeatRoutione()
+    {
+        if (defeatEffectPrefab != null)
+        {
+            if (GetComponent<Collider2D>()) GetComponent<Collider2D>().enabled = false; // 물리 충돌 끄기
+
+            if (defeatEffectPrefab != null)
+            {
+                GameObject effectGroup = Instantiate(defeatEffectPrefab, transform.position, Quaternion.identity);
+                effectGroup.transform.SetParent(this.transform);
+
+                Animator[] childAnims = effectGroup.GetComponentsInChildren<Animator>(); // 자식의 모든 애니메이터 가져온 리스트
+
+                if (childAnims.Length > 0)
+                {
+                    for (int i = 0; i < explosionRepeatCount; i++)
+                    {
+                        foreach (var anim in childAnims)
+                        {
+                            anim.Play("ExplosionEffect", 0, 0f); // 폭발 이팩트 재생
+                        }
+                        // 첫 번째 자식 애니메이션 길이를 기준으로 대기
+                        yield return new WaitForSeconds(childAnims[0].GetCurrentAnimatorStateInfo(0).length); // 애니메이션 한 번의 길이를 기다림
+                    }
+                }
+
+                foreach (var anim in childAnims)
+                {
+                    anim.SetTrigger("ExplosionEnd"); // 연기 상태로 전이
+                }
+            }
+        }
+
+        // 가라앉기
+        while (transform.position.y > targetY)
+        {
+            transform.position = Vector3.MoveTowards(transform.position, new Vector3(
+                transform.position.x, targetY, transform.position.z), sinkSpeed * Time.deltaTime);
+            transform.Translate(Vector3.down * sinkSpeed * Time.deltaTime); // 가라 앉기
+            yield return null;
+        }
+
         // 승리 로직
         if (RewardManager.Instance != null)
         {
