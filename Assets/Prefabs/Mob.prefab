@@ -190,7 +190,7 @@ MonoBehaviour:
   mobHPUI: {fileID: 7256616533913348081}
   flashDuration: 0.1
   hitColor: {r: 1, g: 0.57254905, b: 0.57254905, a: 1}
-  explodeTriggerName: isDead
+  explodeTriggerName: IsDead
   explosionDelay: 0.5
 --- !u!50 &-6810079859373246200
 Rigidbody2D:

@@ -12,6 +12,11 @@ public class RewardManager : MonoBehaviour
     public List<string> collectedSupporterIDs = new List<string>(); // 서포터ID 저장 리스트
     public ResultUI resultUI; // 결과 UI
 
+    [Header("Stage Stop")]
+    public PlayerController RunController; // 러닝 스테이지 플레이어 컨트롤러
+    public BossPlayerController BossController; // 보스 스테이지 플레이어 컨트롤러
+
+
     void Awake()
     {
         if (Instance == null)

@@ -25,8 +25,8 @@ public class MobAI : MonoBehaviour
     /// 죽을 시 폭발 셋팅
     /// </summary>
     [Header("Die Animaion Settings")]
-    public string explodeTriggerName = "isDead"; // 애니메이션 트리거
-    public float explosionDelay = 0.5f; // 폭발 애니메이션 표시 시간
+    public string explodeTriggerName = "IsDead"; // 애니메이션 트리거
+    public float explosionDelay; // 폭발 애니메이션 표시 시간
 
     private Animator anim; // 애니메이션 참조
     private Collider2D col; // 콜라이더
@@ -42,8 +42,8 @@ public class MobAI : MonoBehaviour
         col = GetComponent<Collider2D>();
 
         playerTransform = GameObject.FindGameObjectWithTag("Player").transform;
-        InvokeRepeating("ShootAtPlayer", 1f, shootingInterval); // 일정 간격으로 탄환 발사
-        Destroy(gameObject, 10f); // 5초 후 제거
+        if(!isExploding) InvokeRepeating("ShootAtPlayer", 1f, shootingInterval); // 일정 간격으로 탄환 발사
+        Destroy(gameObject, 10f); // 제거
     }
 
 
@@ -51,9 +51,11 @@ public class MobAI : MonoBehaviour
     {
         if (playerTransform != null) return;
 
-        Vector2 targetPos = new Vector2(transform.position.x - 1f, playerTransform.position.y); // 플레이어의 y좌표를 따라 이동
-        transform.position = Vector2.MoveTowards(transform.position, targetPos, moveSpeed * Time.deltaTime); // 이동
-
+        if(!isExploding)
+        {
+            Vector2 targetPos = new Vector2(transform.position.x - 1f, playerTransform.position.y); // 플레이어의 y좌표를 따라 이동
+            transform.position = Vector2.MoveTowards(transform.position, targetPos, moveSpeed * Time.deltaTime); // 이동
+        }
     }
 
     void ShootAtPlayer()
@@ -93,6 +95,9 @@ public class MobAI : MonoBehaviour
 
     IEnumerator DieRoutine()
     {
+        isExploding = true;
+        mobHPUI.gameObject.SetActive(false); // UI 제거
+
         if (col != null) col.enabled = false; // 통과 가능하게
 
         if (anim != null)
@@ -103,5 +108,6 @@ public class MobAI : MonoBehaviour
 
         yield return new WaitForSeconds(explosionDelay);
         Destroy(gameObject); // 몹 제거
+        isExploding = false;
     }
 }

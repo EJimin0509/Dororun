@@ -4519,6 +4519,8 @@ MonoBehaviour:
   - 1
   - 2
   resultUI: {fileID: 1077240319}
+  RunController: {fileID: 0}
+  BossController: {fileID: 0}
 --- !u!4 &1135544586
 Transform:
   m_ObjectHideFlags: 0
