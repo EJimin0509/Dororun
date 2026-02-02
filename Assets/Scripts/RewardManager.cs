@@ -13,7 +13,7 @@ public class RewardManager : MonoBehaviour
     public ResultUI resultUI; // 결과 UI
 
     [Header("Stage Stop")]
-    public PlayerController RunController; // 러닝 스테이지 플레이어 컨트롤러
+    //public PlayerController RunController; // 러닝 스테이지 플레이어 컨트롤러
     public BossPlayerController BossController; // 보스 스테이지 플레이어 컨트롤러
 
 

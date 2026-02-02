@@ -978,6 +978,7 @@ MonoBehaviour:
   - 1
   - 2
   resultUI: {fileID: 1614146533}
+  BossController: {fileID: 1412635557}
 --- !u!4 &751828314
 Transform:
   m_ObjectHideFlags: 0
@@ -2448,6 +2449,8 @@ MonoBehaviour:
   sinkSpeed: 1
   explosionRepeatCount: 3
   defeatEffectPrefab: {fileID: 2054029737163442867, guid: f8eccfca099e9604bbc315e4ce08af46, type: 3}
+  worldScroller1: {fileID: 527707752}
+  worldScroller2: {fileID: 312652130}
 --- !u!61 &1452819996
 BoxCollider2D:
   m_ObjectHideFlags: 0

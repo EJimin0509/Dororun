@@ -1,0 +1,1417 @@
+fileFormatVersion: 2
+guid: 01294e5a72fc28f4b8209bb9a6089af0
+TextureImporter:
+  internalIDToNameTable:
+  - first:
+      213: 1281242104586054685
+    second: doro_dead_0
+  - first:
+      213: -7667408291769936272
+    second: doro_dead_1
+  - first:
+      213: -5966589583755753469
+    second: doro_dead_2
+  - first:
+      213: -1124398015388531210
+    second: doro_dead_3
+  - first:
+      213: -8137714930714717167
+    second: doro_dead_4
+  - first:
+      213: 2259778850568188757
+    second: doro_dead_5
+  - first:
+      213: -4128650061665836157
+    second: doro_dead_6
+  - first:
+      213: 8439079592395710685
+    second: doro_dead_7
+  - first:
+      213: -5012128891152302701
+    second: doro_dead_8
+  - first:
+      213: 7153820309836576205
+    second: doro_dead_9
+  - first:
+      213: 556687936631207993
+    second: doro_dead_10
+  - first:
+      213: -4853925103228183560
+    second: doro_dead_11
+  - first:
+      213: -2189545100045211652
+    second: doro_dead_12
+  - first:
+      213: 6752484335782609748
+    second: doro_dead_13
+  - first:
+      213: 1755562458811144161
+    second: doro_dead_14
+  - first:
+      213: -4241488022271298634
+    second: doro_dead_15
+  - first:
+      213: -1962357304868554095
+    second: doro_dead_16
+  - first:
+      213: 7836711454863918094
+    second: doro_dead_17
+  - first:
+      213: 5281806241777962345
+    second: doro_dead_18
+  - first:
+      213: 7345146887565005690
+    second: doro_dead_19
+  - first:
+      213: 4487394051319352356
+    second: doro_dead_20
+  - first:
+      213: 7396823072594945575
+    second: doro_dead_21
+  - first:
+      213: -2779297568000513061
+    second: doro_dead_22
+  - first:
+      213: 2898072035700442568
+    second: doro_dead_23
+  - first:
+      213: 6329555098826749593
+    second: doro_dead_24
+  - first:
+      213: -176313968358291069
+    second: doro_dead_25
+  - first:
+      213: 8223651443097567221
+    second: doro_dead_26
+  - first:
+      213: 727896387586509326
+    second: doro_dead_27
+  - first:
+      213: -1362186830928520603
+    second: doro_dead_28
+  - first:
+      213: 6982382112409142110
+    second: doro_dead_29
+  - first:
+      213: 4255543008951712809
+    second: doro_dead_30
+  - first:
+      213: -2153553816528406640
+    second: doro_dead_31
+  - first:
+      213: -418071500276320269
+    second: doro_dead_32
+  - first:
+      213: -5128769611411291105
+    second: doro_dead_33
+  - first:
+      213: 6815250198039921582
+    second: doro_dead_34
+  - first:
+      213: 9220351568758372241
+    second: doro_dead_35
+  - first:
+      213: 5790856352185885736
+    second: doro_dead_36
+  - first:
+      213: -9095252020832792512
+    second: doro_dead_37
+  - first:
+      213: 8291530724128726052
+    second: doro_dead_38
+  - first:
+      213: -5614549791985274475
+    second: doro_dead_39
+  - first:
+      213: -7633283384154921577
+    second: doro_dead_40
+  - first:
+      213: 6519706852547911729
+    second: doro_dead_41
+  - first:
+      213: 7329576763986480966
+    second: doro_dead_42
+  - first:
+      213: 4474983003771651916
+    second: doro_dead_43
+  - first:
+      213: 4805540514771506841
+    second: doro_dead_44
+  - first:
+      213: 4800729123709392762
+    second: doro_dead_45
+  - first:
+      213: -4561338854386229239
+    second: doro_dead_46
+  - first:
+      213: -7522825881342781504
+    second: doro_dead_47
+  - first:
+      213: -2634689494063566292
+    second: doro_dead_48
+  externalObjects: {}
+  serializedVersion: 13
+  mipmaps:
+    mipMapMode: 0
+    enableMipMap: 0
+    sRGBTexture: 1
+    linearTexture: 0
+    fadeOut: 0
+    borderMipMap: 0
+    mipMapsPreserveCoverage: 0
+    alphaTestReferenceValue: 0.5
+    mipMapFadeDistanceStart: 1
+    mipMapFadeDistanceEnd: 3
+  bumpmap:
+    convertToNormalMap: 0
+    externalNormalMap: 0
+    heightScale: 0.25
+    normalMapFilter: 0
+    flipGreenChannel: 0
+  isReadable: 0
+  streamingMipmaps: 0
+  streamingMipmapsPriority: 0
+  vTOnly: 0
+  ignoreMipmapLimit: 0
+  grayScaleToAlpha: 0
+  generateCubemap: 6
+  cubemapConvolution: 0
+  seamlessCubemap: 0
+  textureFormat: 1
+  maxTextureSize: 2048
+  textureSettings:
+    serializedVersion: 2
+    filterMode: 1
+    aniso: 1
+    mipBias: 0
+    wrapU: 1
+    wrapV: 1
+    wrapW: 1
+  nPOTScale: 0
+  lightmap: 0
+  compressionQuality: 50
+  spriteMode: 2
+  spriteExtrude: 1
+  spriteMeshType: 1
+  alignment: 0
+  spritePivot: {x: 0.5, y: 0.5}
+  spritePixelsToUnits: 100
+  spriteBorder: {x: 0, y: 0, z: 0, w: 0}
+  spriteGenerateFallbackPhysicsShape: 1
+  alphaUsage: 1
+  alphaIsTransparency: 1
+  spriteTessellationDetail: -1
+  textureType: 8
+  textureShape: 1
+  singleChannelComponent: 0
+  flipbookRows: 1
+  flipbookColumns: 1
+  maxTextureSizeSet: 0
+  compressionQualitySet: 0
+  textureFormatSet: 0
+  ignorePngGamma: 0
+  applyGammaDecoding: 0
+  swizzle: 50462976
+  cookieLightType: 0
+  platformSettings:
+  - serializedVersion: 4
+    buildTarget: DefaultTexturePlatform
+    maxTextureSize: 2048
+    resizeAlgorithm: 0
+    textureFormat: -1
+    textureCompression: 1
+    compressionQuality: 50
+    crunchedCompression: 0
+    allowsAlphaSplitting: 0
+    overridden: 0
+    ignorePlatformSupport: 0
+    androidETC2FallbackOverride: 0
+    forceMaximumCompressionQuality_BC6H_BC7: 0
+  - serializedVersion: 4
+    buildTarget: Standalone
+    maxTextureSize: 2048
+    resizeAlgorithm: 0
+    textureFormat: -1
+    textureCompression: 1
+    compressionQuality: 50
+    crunchedCompression: 0
+    allowsAlphaSplitting: 0
+    overridden: 0
+    ignorePlatformSupport: 0
+    androidETC2FallbackOverride: 0
+    forceMaximumCompressionQuality_BC6H_BC7: 0
+  - serializedVersion: 4
+    buildTarget: Android
+    maxTextureSize: 2048
+    resizeAlgorithm: 0
+    textureFormat: -1
+    textureCompression: 1
+    compressionQuality: 50
+    crunchedCompression: 0
+    allowsAlphaSplitting: 0
+    overridden: 0
+    ignorePlatformSupport: 0
+    androidETC2FallbackOverride: 0
+    forceMaximumCompressionQuality_BC6H_BC7: 0
+  - serializedVersion: 4
+    buildTarget: WebGL
+    maxTextureSize: 2048
+    resizeAlgorithm: 0
+    textureFormat: -1
+    textureCompression: 1
+    compressionQuality: 50
+    crunchedCompression: 0
+    allowsAlphaSplitting: 0
+    overridden: 0
+    ignorePlatformSupport: 0
+    androidETC2FallbackOverride: 0
+    forceMaximumCompressionQuality_BC6H_BC7: 0
+  spriteSheet:
+    serializedVersion: 2
+    sprites:
+    - serializedVersion: 2
+      name: doro_dead_0
+      rect:
+        serializedVersion: 2
+        x: 0
+        y: 0
+        width: 193
+        height: 192
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: d1c2023e7e2e7c110800000000000000
+      internalID: 1281242104586054685
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: doro_dead_1
+      rect:
+        serializedVersion: 2
+        x: 191
+        y: 0
+        width: 194
+        height: 192
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 0761b2548c4e79590800000000000000
+      internalID: -7667408291769936272
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: doro_dead_2
+      rect:
+        serializedVersion: 2
+        x: 383
+        y: 0
+        width: 194
+        height: 192
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 30841bbc26a623da0800000000000000
+      internalID: -5966589583755753469
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: doro_dead_3
+      rect:
+        serializedVersion: 2
+        x: 575
+        y: 0
+        width: 194
+        height: 192
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 6f5cc9a56f55560f0800000000000000
+      internalID: -1124398015388531210
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: doro_dead_4
+      rect:
+        serializedVersion: 2
+        x: 767
+        y: 0
+        width: 194
+        height: 192
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 1145b5fc267011f80800000000000000
+      internalID: -8137714930714717167
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: doro_dead_5
+      rect:
+        serializedVersion: 2
+        x: 959
+        y: 0
+        width: 194
+        height: 192
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 553be0b44e85c5f10800000000000000
+      internalID: 2259778850568188757
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: doro_dead_6
+      rect:
+        serializedVersion: 2
+        x: 1151
+        y: 0
+        width: 194
+        height: 192
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 3836388b4a614b6c0800000000000000
+      internalID: -4128650061665836157
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: doro_dead_7
+      rect:
+        serializedVersion: 2
+        x: 1343
+        y: 0
+        width: 194
+        height: 188
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: dd0aef75d22ad1570800000000000000
+      internalID: 8439079592395710685
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: doro_dead_8
+      rect:
+        serializedVersion: 2
+        x: 1410
+        y: 168
+        width: 58
+        height: 24
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 39df4623457517ab0800000000000000
+      internalID: -5012128891152302701
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: doro_dead_9
+      rect:
+        serializedVersion: 2
+        x: 1585
+        y: 172
+        width: 34
+        height: 19
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: dc5b8c25ba9774360800000000000000
+      internalID: 7153820309836576205
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: doro_dead_10
+      rect:
+        serializedVersion: 2
+        x: 1635
+        y: 177
+        width: 25
+        height: 15
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 938f5a99ab0c9b700800000000000000
+      internalID: 556687936631207993
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: doro_dead_11
+      rect:
+        serializedVersion: 2
+        x: 1667
+        y: 158
+        width: 31
+        height: 30
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 8fb9bb7f5d463acb0800000000000000
+      internalID: -4853925103228183560
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: doro_dead_12
+      rect:
+        serializedVersion: 2
+        x: 1774
+        y: 143
+        width: 82
+        height: 49
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: cf7ab1c055c2d91e0800000000000000
+      internalID: -2189545100045211652
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: doro_dead_13
+      rect:
+        serializedVersion: 2
+        x: 1945
+        y: 108
+        width: 111
+        height: 84
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 45346b92ab4a5bd50800000000000000
+      internalID: 6752484335782609748
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: doro_dead_14
+      rect:
+        serializedVersion: 2
+        x: 2158
+        y: 104
+        width: 88
+        height: 88
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 1e7137241c20d5810800000000000000
+      internalID: 1755562458811144161
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: doro_dead_15
+      rect:
+        serializedVersion: 2
+        x: 1535
+        y: 0
+        width: 181
+        height: 164
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 6b3f179bd153325c0800000000000000
+      internalID: -4241488022271298634
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: doro_dead_16
+      rect:
+        serializedVersion: 2
+        x: 1693
+        y: 134
+        width: 23
+        height: 23
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 19abae0ad6e44c4e0800000000000000
+      internalID: -1962357304868554095
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: doro_dead_17
+      rect:
+        serializedVersion: 2
+        x: 1856
+        y: 101
+        width: 42
+        height: 42
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: e04066a2c8791cc60800000000000000
+      internalID: 7836711454863918094
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: doro_dead_18
+      rect:
+        serializedVersion: 2
+        x: 1874
+        y: 144
+        width: 22
+        height: 26
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 96dcd9deacebc4940800000000000000
+      internalID: 5281806241777962345
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: doro_dead_19
+      rect:
+        serializedVersion: 2
+        x: 1878
+        y: 108
+        width: 30
+        height: 34
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: a73d0609d243fe560800000000000000
+      internalID: 7345146887565005690
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: doro_dead_20
+      rect:
+        serializedVersion: 2
+        x: 2067
+        y: 136
+        width: 35
+        height: 33
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 42c471c4d1d664e30800000000000000
+      internalID: 4487394051319352356
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: doro_dead_21
+      rect:
+        serializedVersion: 2
+        x: 2237
+        y: 136
+        width: 55
+        height: 34
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 7266f6cf46bc6a660800000000000000
+      internalID: 7396823072594945575
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: doro_dead_22
+      rect:
+        serializedVersion: 2
+        x: 1718
+        y: 112
+        width: 10
+        height: 9
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: bdbe8365693fd69d0800000000000000
+      internalID: -2779297568000513061
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: doro_dead_23
+      rect:
+        serializedVersion: 2
+        x: 1727
+        y: 65
+        width: 21
+        height: 33
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 8c50b6d6925083820800000000000000
+      internalID: 2898072035700442568
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: doro_dead_24
+      rect:
+        serializedVersion: 2
+        x: 1736
+        y: 2
+        width: 170
+        height: 107
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 996b4d3b3d817d750800000000000000
+      internalID: 6329555098826749593
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: doro_dead_25
+      rect:
+        serializedVersion: 2
+        x: 1752
+        y: 90
+        width: 37
+        height: 42
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 3898013416b9d8df0800000000000000
+      internalID: -176313968358291069
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: doro_dead_26
+      rect:
+        serializedVersion: 2
+        x: 1795
+        y: 98
+        width: 32
+        height: 20
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 5ff757eaa67402270800000000000000
+      internalID: 8223651443097567221
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: doro_dead_27
+      rect:
+        serializedVersion: 2
+        x: 1858
+        y: 101
+        width: 21
+        height: 13
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: e0a426f68e10a1a00800000000000000
+      internalID: 727896387586509326
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: doro_dead_28
+      rect:
+        serializedVersion: 2
+        x: 1910
+        y: 114
+        width: 10
+        height: 9
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 56a5ac06b4a881de0800000000000000
+      internalID: -1362186830928520603
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: doro_dead_29
+      rect:
+        serializedVersion: 2
+        x: 1989
+        y: 83
+        width: 10
+        height: 10
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: e534038798766e060800000000000000
+      internalID: 6982382112409142110
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: doro_dead_30
+      rect:
+        serializedVersion: 2
+        x: 2004
+        y: 73
+        width: 16
+        height: 29
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 92cb6fed1d9be0b30800000000000000
+      internalID: 4255543008951712809
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: doro_dead_31
+      rect:
+        serializedVersion: 2
+        x: 2013
+        y: 86
+        width: 31
+        height: 21
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 0973321c63a0d12e0800000000000000
+      internalID: -2153553816528406640
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: doro_dead_32
+      rect:
+        serializedVersion: 2
+        x: 2043
+        y: 76
+        width: 11
+        height: 15
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 3f7b05f7f26b23af0800000000000000
+      internalID: -418071500276320269
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: doro_dead_33
+      rect:
+        serializedVersion: 2
+        x: 2052
+        y: 82
+        width: 31
+        height: 31
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: f1403093633f2d8b0800000000000000
+      internalID: -5128769611411291105
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: doro_dead_34
+      rect:
+        serializedVersion: 2
+        x: 2081
+        y: 77
+        width: 33
+        height: 19
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: ea3849542f1a49e50800000000000000
+      internalID: 6815250198039921582
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: doro_dead_35
+      rect:
+        serializedVersion: 2
+        x: 2098
+        y: 114
+        width: 45
+        height: 15
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 197fe0876e445ff70800000000000000
+      internalID: 9220351568758372241
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: doro_dead_36
+      rect:
+        serializedVersion: 2
+        x: 2268
+        y: 89
+        width: 36
+        height: 34
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 824aa59cb214d5050800000000000000
+      internalID: 5790856352185885736
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: doro_dead_37
+      rect:
+        serializedVersion: 2
+        x: 1920
+        y: 2
+        width: 174
+        height: 85
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 0409b9bc97c27c180800000000000000
+      internalID: -9095252020832792512
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: doro_dead_38
+      rect:
+        serializedVersion: 2
+        x: 1976
+        y: 60
+        width: 18
+        height: 23
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 42c1eef534f611370800000000000000
+      internalID: 8291530724128726052
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: doro_dead_39
+      rect:
+        serializedVersion: 2
+        x: 2027
+        y: 73
+        width: 8
+        height: 9
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 59179fa16bc1512b0800000000000000
+      internalID: -5614549791985274475
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: doro_dead_40
+      rect:
+        serializedVersion: 2
+        x: 2192
+        y: 48
+        width: 38
+        height: 33
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 795ed897431211690800000000000000
+      internalID: -7633283384154921577
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: doro_dead_41
+      rect:
+        serializedVersion: 2
+        x: 2234
+        y: 60
+        width: 27
+        height: 23
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 1306cc9e6d6aa7a50800000000000000
+      internalID: 6519706852547911729
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: doro_dead_42
+      rect:
+        serializedVersion: 2
+        x: 2264
+        y: 57
+        width: 21
+        height: 16
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 64f0f5bab33e7b560800000000000000
+      internalID: 7329576763986480966
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: doro_dead_43
+      rect:
+        serializedVersion: 2
+        x: 1929
+        y: 44
+        width: 16
+        height: 19
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: c4748bb15555a1e30800000000000000
+      internalID: 4474983003771651916
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: doro_dead_44
+      rect:
+        serializedVersion: 2
+        x: 2123
+        y: 34
+        width: 25
+        height: 18
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 99614b823a5b0b240800000000000000
+      internalID: 4805540514771506841
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: doro_dead_45
+      rect:
+        serializedVersion: 2
+        x: 2153
+        y: 38
+        width: 17
+        height: 22
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: a771291e3bd9f9240800000000000000
+      internalID: 4800729123709392762
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: doro_dead_46
+      rect:
+        serializedVersion: 2
+        x: 2176
+        y: 33
+        width: 16
+        height: 22
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 9002f1c9a7ed2b0c0800000000000000
+      internalID: -4561338854386229239
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: doro_dead_47
+      rect:
+        serializedVersion: 2
+        x: 2180
+        y: 2
+        width: 90
+        height: 64
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 0c7d273f7bd899790800000000000000
+      internalID: -7522825881342781504
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: doro_dead_48
+      rect:
+        serializedVersion: 2
+        x: 2124
+        y: 12
+        width: 32
+        height: 21
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: c2233e44dd3bf6bd0800000000000000
+      internalID: -2634689494063566292
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    outline: []
+    customData: 
+    physicsShape: []
+    bones: []
+    spriteID: 
+    internalID: 0
+    vertices: []
+    indices: 
+    edges: []
+    weights: []
+    secondaryTextures: []
+    spriteCustomMetadata:
+      entries: []
+    nameFileIdTable:
+      doro_dead_0: 1281242104586054685
+      doro_dead_1: -7667408291769936272
+      doro_dead_10: 556687936631207993
+      doro_dead_11: -4853925103228183560
+      doro_dead_12: -2189545100045211652
+      doro_dead_13: 6752484335782609748
+      doro_dead_14: 1755562458811144161
+      doro_dead_15: -4241488022271298634
+      doro_dead_16: -1962357304868554095
+      doro_dead_17: 7836711454863918094
+      doro_dead_18: 5281806241777962345
+      doro_dead_19: 7345146887565005690
+      doro_dead_2: -5966589583755753469
+      doro_dead_20: 4487394051319352356
+      doro_dead_21: 7396823072594945575
+      doro_dead_22: -2779297568000513061
+      doro_dead_23: 2898072035700442568
+      doro_dead_24: 6329555098826749593
+      doro_dead_25: -176313968358291069
+      doro_dead_26: 8223651443097567221
+      doro_dead_27: 727896387586509326
+      doro_dead_28: -1362186830928520603
+      doro_dead_29: 6982382112409142110
+      doro_dead_3: -1124398015388531210
+      doro_dead_30: 4255543008951712809
+      doro_dead_31: -2153553816528406640
+      doro_dead_32: -418071500276320269
+      doro_dead_33: -5128769611411291105
+      doro_dead_34: 6815250198039921582
+      doro_dead_35: 9220351568758372241
+      doro_dead_36: 5790856352185885736
+      doro_dead_37: -9095252020832792512
+      doro_dead_38: 8291530724128726052
+      doro_dead_39: -5614549791985274475
+      doro_dead_4: -8137714930714717167
+      doro_dead_40: -7633283384154921577
+      doro_dead_41: 6519706852547911729
+      doro_dead_42: 7329576763986480966
+      doro_dead_43: 4474983003771651916
+      doro_dead_44: 4805540514771506841
+      doro_dead_45: 4800729123709392762
+      doro_dead_46: -4561338854386229239
+      doro_dead_47: -7522825881342781504
+      doro_dead_48: -2634689494063566292
+      doro_dead_5: 2259778850568188757
+      doro_dead_6: -4128650061665836157
+      doro_dead_7: 8439079592395710685
+      doro_dead_8: -5012128891152302701
+      doro_dead_9: 7153820309836576205
+  mipmapLimitGroupName: 
+  pSDRemoveMatte: 0
+  userData: 
+  assetBundleName: 
+  assetBundleVariant: 
