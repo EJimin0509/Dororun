@@ -1,5 +1,6 @@
 using UnityEngine;
 using UnityEngine.UI;
+using System.Collections;
 
 public class PlayerHealth : MonoBehaviour
 {
@@ -16,14 +17,24 @@ public class PlayerHealth : MonoBehaviour
     [Header("UI Reference")]
     public HP_Bar playerHPUI; // UI 연결
 
+    /// <summary>
+    /// 패배를 위한 세팅
+    /// </summary>
+    [Header("Defeated Setting")]
+    public WorldScroller worldScroller1; // 배경을 멈추기 위한 참조
+    public WorldScroller worldScroller2; // 배경을 멈추기 위한 참조
+    public WorldScroller worldScroller3; // 타일맵을 멈추기 위한 참조
+
     private Animator anim;
     private SpriteRenderer spriteRenderer;
+    private Rigidbody2D rb2d;
 
     void Start()
     {
         anim = GetComponentInChildren<Animator>();
         spriteRenderer = GetComponentInChildren<SpriteRenderer>();
         playerHPUI.UpdateHP(CurrentHP, maxHP);
+        rb2d = GetComponent<Rigidbody2D>();
     }
 
     // 대미지 처리 메서드
@@ -37,22 +48,21 @@ public class PlayerHealth : MonoBehaviour
         playerHPUI.UpdateHP(CurrentHP, maxHP); // UI 갱신
         Debug.Log($"dmg: {damage}, HP: {CurrentHP}/{maxHP}");
 
-        if (anim != null) 
+        if (anim != null && CurrentHP <= 0) Die(); // 사망
+
+        if (anim != null && CurrentHP > 0) 
         {
-            anim.SetTrigger("OnHit");
             anim.SetBool("IsInvincible", true);
+            StartCoroutine(InvincibilityRoutine()); // 무적 상태
         }
-
-        StartCoroutine(InvincibilityRoutine()); // 무적 상태
-
-        if (CurrentHP <= 0) Die(); // 사망
     }
 
     // 사망 처리
     void Die()
     {
-        Debug.Log("Player Dead");
-        RewardManager.Instance.FinalizeReward(false);
+        StartCoroutine(DefeatedRoutine()); // 애니메이션 실행 코루틴
+        
+        
     }
 
     // 충돌 처리
@@ -77,7 +87,7 @@ public class PlayerHealth : MonoBehaviour
     }
 
     // 무적 상태 처리 코루틴
-    System.Collections.IEnumerator InvincibilityRoutine()
+    IEnumerator InvincibilityRoutine()
     {
         if (!isInvincible)
         {
@@ -86,12 +96,33 @@ public class PlayerHealth : MonoBehaviour
             yield return new WaitForSeconds(invincibilityTime);
             isInvincible = false;
 
-            isInvincible = false;
             if (anim != null)
             {
                 anim.SetBool("IsInvincible", false);
             }
             Debug.Log("Invincible false");
         }
+    }
+
+    // 패배 애니메이션 처리 루틴
+    IEnumerator DefeatedRoutine()
+    {
+        // 배경 멈춤
+        if(worldScroller1 != null) worldScroller1.enabled = false;
+        if(worldScroller2 != null) worldScroller2.enabled = false;
+        if(worldScroller3 != null) worldScroller3.enabled = false;
+
+        if (GetComponent<Collider2D>())
+        {
+            rb2d.bodyType = RigidbodyType2D.Static;
+            GetComponent<Collider2D>().enabled = false; // 물리 충돌 끄기
+        }
+        
+        Debug.Log("Player Defeated");
+        anim.SetBool("IsDefeated", true);
+
+        yield return new WaitForSeconds(2.5f);
+        
+        RewardManager.Instance.FinalizeReward(false);
     }
 }

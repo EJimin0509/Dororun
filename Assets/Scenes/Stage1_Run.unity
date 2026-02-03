@@ -4519,7 +4519,6 @@ MonoBehaviour:
   - 1
   - 2
   resultUI: {fileID: 1077240319}
-  RunController: {fileID: 0}
   BossController: {fileID: 0}
 --- !u!4 &1135544586
 Transform:
@@ -25680,6 +25679,9 @@ MonoBehaviour:
   maxHP: 100
   invincibilityTime: 1.5
   playerHPUI: {fileID: 231881939}
+  worldScroller1: {fileID: 1913592136}
+  worldScroller2: {fileID: 1099280626}
+  worldScroller3: {fileID: 1646326769}
 --- !u!1 &1781720441
 GameObject:
   m_ObjectHideFlags: 0

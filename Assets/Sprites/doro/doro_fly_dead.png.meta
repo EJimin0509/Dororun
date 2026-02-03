@@ -1,154 +1,154 @@
 fileFormatVersion: 2
-guid: 01294e5a72fc28f4b8209bb9a6089af0
+guid: 91270a562b57ab249bdab456ff589ac7
 TextureImporter:
   internalIDToNameTable:
   - first:
-      213: 1281242104586054685
-    second: doro_dead_0
+      213: -5439149548014232246
+    second: doro_fly_dead_0
   - first:
-      213: -7667408291769936272
-    second: doro_dead_1
+      213: -1300770889269390566
+    second: doro_fly_dead_1
   - first:
-      213: -5966589583755753469
-    second: doro_dead_2
+      213: 2913273063198872088
+    second: doro_fly_dead_2
   - first:
-      213: -1124398015388531210
-    second: doro_dead_3
+      213: -7279682855715563731
+    second: doro_fly_dead_3
   - first:
-      213: -8137714930714717167
-    second: doro_dead_4
+      213: -1201863064569052201
+    second: doro_fly_dead_4
   - first:
-      213: 2259778850568188757
-    second: doro_dead_5
+      213: -1327338574610267413
+    second: doro_fly_dead_5
   - first:
-      213: -4128650061665836157
-    second: doro_dead_6
+      213: 6751575519087365415
+    second: doro_fly_dead_6
   - first:
-      213: 8439079592395710685
-    second: doro_dead_7
+      213: 7827419588126925600
+    second: doro_fly_dead_7
   - first:
-      213: -5012128891152302701
-    second: doro_dead_8
+      213: -7922897914665273752
+    second: doro_fly_dead_8
   - first:
-      213: 7153820309836576205
-    second: doro_dead_9
+      213: 6540008581305559871
+    second: doro_fly_dead_9
   - first:
-      213: 556687936631207993
-    second: doro_dead_10
+      213: 7520481954025856457
+    second: doro_fly_dead_10
   - first:
-      213: -4853925103228183560
-    second: doro_dead_11
+      213: -2644780648138947884
+    second: doro_fly_dead_11
   - first:
-      213: -2189545100045211652
-    second: doro_dead_12
+      213: -443689937598154139
+    second: doro_fly_dead_12
   - first:
-      213: 6752484335782609748
-    second: doro_dead_13
+      213: -893668084826228978
+    second: doro_fly_dead_13
   - first:
-      213: 1755562458811144161
-    second: doro_dead_14
+      213: -8670620266285774084
+    second: doro_fly_dead_14
   - first:
-      213: -4241488022271298634
-    second: doro_dead_15
+      213: 117903035043645920
+    second: doro_fly_dead_15
   - first:
-      213: -1962357304868554095
-    second: doro_dead_16
+      213: -7267708607516726112
+    second: doro_fly_dead_16
   - first:
-      213: 7836711454863918094
-    second: doro_dead_17
+      213: -2423617968852168100
+    second: doro_fly_dead_17
   - first:
-      213: 5281806241777962345
-    second: doro_dead_18
+      213: 7580404517253037938
+    second: doro_fly_dead_18
   - first:
-      213: 7345146887565005690
-    second: doro_dead_19
+      213: 257302044363213507
+    second: doro_fly_dead_19
   - first:
-      213: 4487394051319352356
-    second: doro_dead_20
+      213: 4187512589185749892
+    second: doro_fly_dead_20
   - first:
-      213: 7396823072594945575
-    second: doro_dead_21
+      213: 602404876212067831
+    second: doro_fly_dead_21
   - first:
-      213: -2779297568000513061
-    second: doro_dead_22
+      213: 1188076619807432538
+    second: doro_fly_dead_22
   - first:
-      213: 2898072035700442568
-    second: doro_dead_23
+      213: -1894554555201302903
+    second: doro_fly_dead_23
   - first:
-      213: 6329555098826749593
-    second: doro_dead_24
+      213: -5426096225563802266
+    second: doro_fly_dead_24
   - first:
-      213: -176313968358291069
-    second: doro_dead_25
+      213: 2444566690864952264
+    second: doro_fly_dead_25
   - first:
-      213: 8223651443097567221
-    second: doro_dead_26
+      213: 7891761999238003163
+    second: doro_fly_dead_26
   - first:
-      213: 727896387586509326
-    second: doro_dead_27
+      213: 8441258272663692905
+    second: doro_fly_dead_27
   - first:
-      213: -1362186830928520603
-    second: doro_dead_28
+      213: 7109535063285730302
+    second: doro_fly_dead_28
   - first:
-      213: 6982382112409142110
-    second: doro_dead_29
+      213: 8962720448958908104
+    second: doro_fly_dead_29
   - first:
-      213: 4255543008951712809
-    second: doro_dead_30
+      213: -2181609414855769588
+    second: doro_fly_dead_30
   - first:
-      213: -2153553816528406640
-    second: doro_dead_31
+      213: 3233816362984647851
+    second: doro_fly_dead_31
   - first:
-      213: -418071500276320269
-    second: doro_dead_32
+      213: 1382233371513016038
+    second: doro_fly_dead_32
   - first:
-      213: -5128769611411291105
-    second: doro_dead_33
+      213: 1893012707415141297
+    second: doro_fly_dead_33
   - first:
-      213: 6815250198039921582
-    second: doro_dead_34
+      213: 8021411957102380491
+    second: doro_fly_dead_34
   - first:
-      213: 9220351568758372241
-    second: doro_dead_35
+      213: 8258583529926802330
+    second: doro_fly_dead_35
   - first:
-      213: 5790856352185885736
-    second: doro_dead_36
+      213: -9015536375743940304
+    second: doro_fly_dead_36
   - first:
-      213: -9095252020832792512
-    second: doro_dead_37
+      213: 4239351970462188611
+    second: doro_fly_dead_37
   - first:
-      213: 8291530724128726052
-    second: doro_dead_38
+      213: -2487236367090219583
+    second: doro_fly_dead_38
   - first:
-      213: -5614549791985274475
-    second: doro_dead_39
+      213: -6207507714981939961
+    second: doro_fly_dead_39
   - first:
-      213: -7633283384154921577
-    second: doro_dead_40
+      213: 8213630737479115988
+    second: doro_fly_dead_40
   - first:
-      213: 6519706852547911729
-    second: doro_dead_41
+      213: 775447054451885969
+    second: doro_fly_dead_41
   - first:
-      213: 7329576763986480966
-    second: doro_dead_42
+      213: -7007316501065490929
+    second: doro_fly_dead_42
   - first:
-      213: 4474983003771651916
-    second: doro_dead_43
+      213: 4725357349406129110
+    second: doro_fly_dead_43
   - first:
-      213: 4805540514771506841
-    second: doro_dead_44
+      213: 8268704592023947432
+    second: doro_fly_dead_44
   - first:
-      213: 4800729123709392762
-    second: doro_dead_45
+      213: 7738157057649257434
+    second: doro_fly_dead_45
   - first:
-      213: -4561338854386229239
-    second: doro_dead_46
+      213: -7600546811866575746
+    second: doro_fly_dead_46
   - first:
-      213: -7522825881342781504
-    second: doro_dead_47
+      213: -4527572032652618696
+    second: doro_fly_dead_47
   - first:
-      213: -2634689494063566292
-    second: doro_dead_48
+      213: -602563415947458836
+    second: doro_fly_dead_48
   externalObjects: {}
   serializedVersion: 13
   mipmaps:
@@ -270,7 +270,7 @@ TextureImporter:
     serializedVersion: 2
     sprites:
     - serializedVersion: 2
-      name: doro_dead_0
+      name: doro_fly_dead_0
       rect:
         serializedVersion: 2
         x: 0
@@ -285,14 +285,14 @@ TextureImporter:
       physicsShape: []
       tessellationDetail: -1
       bones: []
-      spriteID: d1c2023e7e2e7c110800000000000000
-      internalID: 1281242104586054685
+      spriteID: a4d926ecd424484b0800000000000000
+      internalID: -5439149548014232246
       vertices: []
       indices: 
       edges: []
       weights: []
     - serializedVersion: 2
-      name: doro_dead_1
+      name: doro_fly_dead_1
       rect:
         serializedVersion: 2
         x: 192
@@ -307,14 +307,14 @@ TextureImporter:
       physicsShape: []
       tessellationDetail: -1
       bones: []
-      spriteID: 0761b2548c4e79590800000000000000
-      internalID: -7667408291769936272
+      spriteID: a13ddea94cbb2fde0800000000000000
+      internalID: -1300770889269390566
       vertices: []
       indices: 
       edges: []
       weights: []
     - serializedVersion: 2
-      name: doro_dead_2
+      name: doro_fly_dead_2
       rect:
         serializedVersion: 2
         x: 384
@@ -329,14 +329,14 @@ TextureImporter:
       physicsShape: []
       tessellationDetail: -1
       bones: []
-      spriteID: 30841bbc26a623da0800000000000000
-      internalID: -5966589583755753469
+      spriteID: 812dea17a660e6820800000000000000
+      internalID: 2913273063198872088
       vertices: []
       indices: 
       edges: []
       weights: []
     - serializedVersion: 2
-      name: doro_dead_3
+      name: doro_fly_dead_3
       rect:
         serializedVersion: 2
         x: 576
@@ -351,14 +351,14 @@ TextureImporter:
       physicsShape: []
       tessellationDetail: -1
       bones: []
-      spriteID: 6f5cc9a56f55560f0800000000000000
-      internalID: -1124398015388531210
+      spriteID: d27929b130f59fa90800000000000000
+      internalID: -7279682855715563731
       vertices: []
       indices: 
       edges: []
       weights: []
     - serializedVersion: 2
-      name: doro_dead_4
+      name: doro_fly_dead_4
       rect:
         serializedVersion: 2
         x: 768
@@ -373,14 +373,14 @@ TextureImporter:
       physicsShape: []
       tessellationDetail: -1
       bones: []
-      spriteID: 1145b5fc267011f80800000000000000
-      internalID: -8137714930714717167
+      spriteID: 7d303b719ef125fe0800000000000000
+      internalID: -1201863064569052201
       vertices: []
       indices: 
       edges: []
       weights: []
     - serializedVersion: 2
-      name: doro_dead_5
+      name: doro_fly_dead_5
       rect:
         serializedVersion: 2
         x: 960
@@ -395,14 +395,14 @@ TextureImporter:
       physicsShape: []
       tessellationDetail: -1
       bones: []
-      spriteID: 553be0b44e85c5f10800000000000000
-      internalID: 2259778850568188757
+      spriteID: be28ea35998549de0800000000000000
+      internalID: -1327338574610267413
       vertices: []
       indices: 
       edges: []
       weights: []
     - serializedVersion: 2
-      name: doro_dead_6
+      name: doro_fly_dead_6
       rect:
         serializedVersion: 2
         x: 1152
@@ -417,14 +417,14 @@ TextureImporter:
       physicsShape: []
       tessellationDetail: -1
       bones: []
-      spriteID: 3836388b4a614b6c0800000000000000
-      internalID: -4128650061665836157
+      spriteID: 72d0d69c92a62bd50800000000000000
+      internalID: 6751575519087365415
       vertices: []
       indices: 
       edges: []
       weights: []
     - serializedVersion: 2
-      name: doro_dead_7
+      name: doro_fly_dead_7
       rect:
         serializedVersion: 2
         x: 1344
@@ -439,14 +439,14 @@ TextureImporter:
       physicsShape: []
       tessellationDetail: -1
       bones: []
-      spriteID: dd0aef75d22ad1570800000000000000
-      internalID: 8439079592395710685
+      spriteID: 0236d3ad4a490ac60800000000000000
+      internalID: 7827419588126925600
       vertices: []
       indices: 
       edges: []
       weights: []
     - serializedVersion: 2
-      name: doro_dead_8
+      name: doro_fly_dead_8
       rect:
         serializedVersion: 2
         x: 1536
@@ -461,14 +461,14 @@ TextureImporter:
       physicsShape: []
       tessellationDetail: -1
       bones: []
-      spriteID: 39df4623457517ab0800000000000000
-      internalID: -5012128891152302701
+      spriteID: 86671bce2563c0290800000000000000
+      internalID: -7922897914665273752
       vertices: []
       indices: 
       edges: []
       weights: []
     - serializedVersion: 2
-      name: doro_dead_9
+      name: doro_fly_dead_9
       rect:
         serializedVersion: 2
         x: 1728
@@ -483,14 +483,14 @@ TextureImporter:
       physicsShape: []
       tessellationDetail: -1
       bones: []
-      spriteID: dc5b8c25ba9774360800000000000000
-      internalID: 7153820309836576205
+      spriteID: f3b69bc7727c2ca50800000000000000
+      internalID: 6540008581305559871
       vertices: []
       indices: 
       edges: []
       weights: []
     - serializedVersion: 2
-      name: doro_dead_10
+      name: doro_fly_dead_10
       rect:
         serializedVersion: 2
         x: 1920
@@ -505,14 +505,14 @@ TextureImporter:
       physicsShape: []
       tessellationDetail: -1
       bones: []
-      spriteID: 938f5a99ab0c9b700800000000000000
-      internalID: 556687936631207993
+      spriteID: 9cd5271fd7e1e5860800000000000000
+      internalID: 7520481954025856457
       vertices: []
       indices: 
       edges: []
       weights: []
     - serializedVersion: 2
-      name: doro_dead_11
+      name: doro_fly_dead_11
       rect:
         serializedVersion: 2
         x: 2112
@@ -527,14 +527,14 @@ TextureImporter:
       physicsShape: []
       tessellationDetail: -1
       bones: []
-      spriteID: 8fb9bb7f5d463acb0800000000000000
-      internalID: -4853925103228183560
+      spriteID: 4d2c9de530adb4bd0800000000000000
+      internalID: -2644780648138947884
       vertices: []
       indices: 
       edges: []
       weights: []
     - serializedVersion: 2
-      name: doro_dead_12
+      name: doro_fly_dead_12
       rect:
         serializedVersion: 2
         x: 2304
@@ -549,8 +549,8 @@ TextureImporter:
       physicsShape: []
       tessellationDetail: -1
       bones: []
-      spriteID: cf7ab1c055c2d91e0800000000000000
-      internalID: -2189545100045211652
+      spriteID: 56afb0f3a52b7d9f0800000000000000
+      internalID: -443689937598154139
       vertices: []
       indices: 
       edges: []
@@ -559,7 +559,7 @@ TextureImporter:
     customData: 
     physicsShape: []
     bones: []
-    spriteID: b7a9348577e5e034ba2e68e0709bf814
+    spriteID: 176aa4dbd71dbe144ac5a68c381cd5be
     internalID: 0
     vertices: []
     indices: 
@@ -571,19 +571,19 @@ TextureImporter:
       - key: SpriteEditor.SliceSettings
         value: '{"sliceOnImport":false,"gridCellCount":{"x":1.0,"y":1.0},"gridSpriteSize":{"x":192.0,"y":192.0},"gridSpriteOffset":{"x":0.0,"y":0.0},"gridSpritePadding":{"x":0.0,"y":0.0},"pivot":{"x":0.5,"y":0.5},"pivotPixels":{"x":0.0,"y":0.0},"autoSlicingMethod":0,"spriteAlignment":0,"pivotUnitMode":0,"slicingType":1,"keepEmptyRects":false,"isAlternate":false}'
     nameFileIdTable:
-      doro_dead_0: 1281242104586054685
-      doro_dead_1: -7667408291769936272
-      doro_dead_10: 556687936631207993
-      doro_dead_11: -4853925103228183560
-      doro_dead_12: -2189545100045211652
-      doro_dead_2: -5966589583755753469
-      doro_dead_3: -1124398015388531210
-      doro_dead_4: -8137714930714717167
-      doro_dead_5: 2259778850568188757
-      doro_dead_6: -4128650061665836157
-      doro_dead_7: 8439079592395710685
-      doro_dead_8: -5012128891152302701
-      doro_dead_9: 7153820309836576205
+      doro_fly_dead_0: -5439149548014232246
+      doro_fly_dead_1: -1300770889269390566
+      doro_fly_dead_10: 7520481954025856457
+      doro_fly_dead_11: -2644780648138947884
+      doro_fly_dead_12: -443689937598154139
+      doro_fly_dead_2: 2913273063198872088
+      doro_fly_dead_3: -7279682855715563731
+      doro_fly_dead_4: -1201863064569052201
+      doro_fly_dead_5: -1327338574610267413
+      doro_fly_dead_6: 6751575519087365415
+      doro_fly_dead_7: 7827419588126925600
+      doro_fly_dead_8: -7922897914665273752
+      doro_fly_dead_9: 6540008581305559871
   mipmapLimitGroupName: 
   pSDRemoveMatte: 0
   userData: 

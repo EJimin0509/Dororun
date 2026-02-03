@@ -2259,7 +2259,7 @@ BoxCollider2D:
   m_SpriteTilingProperty:
     border: {x: 0, y: 0, z: 0, w: 0}
     pivot: {x: 0.5, y: 0.5}
-    oldSize: {x: 2.55, y: 2.2917836}
+    oldSize: {x: 2.3999999, y: 2.407031}
     newSize: {x: 2.55, y: 2.2917836}
     adaptiveTilingThreshold: 0.5
     drawMode: 0
@@ -2325,6 +2325,9 @@ MonoBehaviour:
   maxHP: 100
   invincibilityTime: 1.5
   playerHPUI: {fileID: 1567144231}
+  worldScroller1: {fileID: 527707752}
+  worldScroller2: {fileID: 312652130}
+  worldScroller3: {fileID: 0}
 --- !u!1 &1452819992
 GameObject:
   m_ObjectHideFlags: 0
