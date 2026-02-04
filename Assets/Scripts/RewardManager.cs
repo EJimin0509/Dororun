@@ -9,7 +9,6 @@ public class RewardManager : MonoBehaviour
     [Header("Current Stage Rewards")]
     public int currentCredit = 0; // 현재 크래디트
     public int currentJewel = 0; // 현재 쥬얼
-    public List<string> collectedSupporterIDs = new List<string>(); // 서포터ID 저장 리스트
     public ResultUI resultUI; // 결과 UI
 
     [Header("Stage Stop")]
@@ -44,12 +43,6 @@ public class RewardManager : MonoBehaviour
                 currentCredit++; break;
             case "Jewel":
                 currentJewel++; break;
-            case "Supoorter":
-                if (!string.IsNullOrEmpty(supporterID) && !collectedSupporterIDs.Contains(supporterID))
-                {
-                   collectedSupporterIDs.Add(supporterID);
-                    Debug.Log($"Supporter: {supporterID}");
-                } break;
         }
     }
 
@@ -72,12 +65,6 @@ public class RewardManager : MonoBehaviour
         if (resultUI != null)
         {
             resultUI.ShowResult(isVictory, finalCredit, finalJewel);
-        }
-
-        // 서포터는 획득 시 영구 소장
-        foreach (string id in collectedSupporterIDs)
-        {
-            PlayerPrefs.SetInt("Supporter_" + id, 1);
         }
 
         PlayerPrefs.Save();

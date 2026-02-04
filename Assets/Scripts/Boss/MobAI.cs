@@ -25,12 +25,12 @@ public class MobAI : MonoBehaviour
     /// 죽을 시 폭발 셋팅
     /// </summary>
     [Header("Die Animaion Settings")]
-    public string explodeTriggerName = "IsDead"; // 애니메이션 트리거
     public float explosionDelay; // 폭발 애니메이션 표시 시간
 
     private Animator anim; // 애니메이션 참조
     private Collider2D col; // 콜라이더
     private bool isExploding = false; //폭발 여부 체크, 정지를 위함
+    private int explodeTriggerID; // IsDead 트리거를 위한 ID
 
     void Start()
     {
@@ -40,6 +40,7 @@ public class MobAI : MonoBehaviour
 
         anim = GetComponent<Animator>();
         col = GetComponent<Collider2D>();
+        explodeTriggerID = Animator.StringToHash("IsDead");
 
         playerTransform = GameObject.FindGameObjectWithTag("Player").transform;
         if(!isExploding) InvokeRepeating("ShootAtPlayer", 1f, shootingInterval); // 일정 간격으로 탄환 발사
@@ -102,7 +103,7 @@ public class MobAI : MonoBehaviour
 
         if (anim != null)
         {
-            anim.SetTrigger(explodeTriggerName);
+            anim.SetTrigger(explodeTriggerID);
             Debug.Log("Explosion!");
         }
 

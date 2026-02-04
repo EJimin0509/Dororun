@@ -28,6 +28,8 @@ public class PlayerHealth : MonoBehaviour
     private Animator anim;
     private SpriteRenderer spriteRenderer;
     private Rigidbody2D rb2d;
+    private int isInvincibleID; // 애니메이션 bool 파라미터 IsInvincible을 위한 ID
+    private int isDefeatedID; // 애니메이션 bool 파라미터 IsDefeated를 위한 ID
 
     void Start()
     {
@@ -35,6 +37,9 @@ public class PlayerHealth : MonoBehaviour
         spriteRenderer = GetComponentInChildren<SpriteRenderer>();
         playerHPUI.UpdateHP(CurrentHP, maxHP);
         rb2d = GetComponent<Rigidbody2D>();
+
+        isInvincibleID = Animator.StringToHash("IsInvincible");
+        isDefeatedID = Animator.StringToHash("IsDefeated");
     }
 
     // 대미지 처리 메서드
@@ -52,7 +57,7 @@ public class PlayerHealth : MonoBehaviour
 
         if (anim != null && CurrentHP > 0) 
         {
-            anim.SetBool("IsInvincible", true);
+            anim.SetBool(isInvincibleID, true);
             StartCoroutine(InvincibilityRoutine()); // 무적 상태
         }
     }
@@ -98,7 +103,7 @@ public class PlayerHealth : MonoBehaviour
 
             if (anim != null)
             {
-                anim.SetBool("IsInvincible", false);
+                anim.SetBool(isInvincibleID, false);
             }
             Debug.Log("Invincible false");
         }
@@ -119,7 +124,7 @@ public class PlayerHealth : MonoBehaviour
         }
         
         Debug.Log("Player Defeated");
-        anim.SetBool("IsDefeated", true);
+        anim.SetBool(isDefeatedID, true);
 
         yield return new WaitForSeconds(2.5f);
         

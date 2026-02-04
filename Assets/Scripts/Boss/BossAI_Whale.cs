@@ -52,6 +52,8 @@ public class BossAI_Whale : MonoBehaviour
     public GameObject defeatEffectPrefab; // 패배 이펙트를 담은 부모 프리팹
     public WorldScroller worldScroller1; // 배경을 멈추기 위한 참조
     public WorldScroller worldScroller2; // 배경을 멈추기 위한 참조
+    private int explosionEffectID; // ExplosionEffect 애니메이션 해싱위한 ID
+    private int explosionEndID; // ExplosionEnd 애니메이션 해싱위한 ID
 
     private void Awake()
     {
@@ -66,6 +68,8 @@ public class BossAI_Whale : MonoBehaviour
         InvokeRepeating("Pattern1", 2f, fireInterval); // 패턴1 시작
         StartCoroutine(PatternManager()); // 패턴 관리
 
+        explosionEffectID = Animator.StringToHash("ExplosionEffect");
+        explosionEndID = Animator.StringToHash("ExplosionEnd");
     }
 
     void Update()
@@ -228,7 +232,7 @@ public class BossAI_Whale : MonoBehaviour
                     {
                         foreach (var anim in childAnims)
                         {
-                            anim.Play("ExplosionEffect", 0, 0f); // 폭발 이팩트 재생
+                            anim.Play(explosionEffectID, 0, 0f); // 폭발 이팩트 재생
                         }
                         // 첫 번째 자식 애니메이션 길이를 기준으로 대기
                         yield return new WaitForSeconds(childAnims[0].GetCurrentAnimatorStateInfo(0).length); // 애니메이션 한 번의 길이를 기다림
@@ -237,7 +241,7 @@ public class BossAI_Whale : MonoBehaviour
 
                 foreach (var anim in childAnims)
                 {
-                    anim.SetTrigger("ExplosionEnd"); // 연기 상태로 전이
+                    anim.SetTrigger(explosionEndID); // 연기 상태로 전이
                 }
             }
         }
