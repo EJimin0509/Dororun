@@ -21,9 +21,7 @@ public class PlayerHealth : MonoBehaviour
     /// 패배를 위한 세팅
     /// </summary>
     [Header("Defeated Setting")]
-    public WorldScroller worldScroller1; // 배경을 멈추기 위한 참조
-    public WorldScroller worldScroller2; // 배경을 멈추기 위한 참조
-    public WorldScroller worldScroller3; // 타일맵을 멈추기 위한 참조
+    public WorldScroller[] WorldScrollers; // 배경을 멈추기 위한 참조
 
     private Animator anim;
     private SpriteRenderer spriteRenderer;
@@ -113,9 +111,13 @@ public class PlayerHealth : MonoBehaviour
     IEnumerator DefeatedRoutine()
     {
         // 배경 멈춤
-        if(worldScroller1 != null) worldScroller1.enabled = false;
-        if(worldScroller2 != null) worldScroller2.enabled = false;
-        if(worldScroller3 != null) worldScroller3.enabled = false;
+        if(WorldScrollers.Length != 0)
+        {
+            foreach (var scroller in WorldScrollers)
+            {
+                scroller.scrollSpeed = 0f;
+            }
+        }
 
         if (GetComponent<Collider2D>())
         {

@@ -50,8 +50,7 @@ public class BossAI_Whale : MonoBehaviour
     public float sinkSpeed; // 가라앉는 속도
     public float explosionRepeatCount; // 폭발 애니메이션 반복 횟수
     public GameObject defeatEffectPrefab; // 패배 이펙트를 담은 부모 프리팹
-    public WorldScroller worldScroller1; // 배경을 멈추기 위한 참조
-    public WorldScroller worldScroller2; // 배경을 멈추기 위한 참조
+    public WorldScroller[] WorldScrollers; // 배경을 멈추기 위한 참조
     private int explosionEffectID; // ExplosionEffect 애니메이션 해싱위한 ID
     private int explosionEndID; // ExplosionEnd 애니메이션 해싱위한 ID
 
@@ -201,8 +200,13 @@ public class BossAI_Whale : MonoBehaviour
     IEnumerator DefeatRoutione()
     {
         // 배경 멈춤
-        worldScroller1.enabled = false;
-        worldScroller2.enabled = false;
+        if (WorldScrollers.Length != 0)
+        {
+            foreach (var scroller in WorldScrollers)
+            {
+                scroller.scrollSpeed = 0f;
+            }
+        }
 
         // 소환된 모든 Mob 제거
         GameObject[] mobs = GameObject.FindGameObjectsWithTag("Mob");
@@ -213,6 +217,13 @@ public class BossAI_Whale : MonoBehaviour
             {
                 mobAI.StartCoroutine("DieRoutine");
             }
+        }
+
+        // 발사된 모든 미사일 및 탄환 제거
+        GameObject[] bullets = GameObject.FindGameObjectsWithTag("EnemyBullet");
+        foreach (GameObject bullet in bullets)
+        {
+            
         }
 
         if (defeatEffectPrefab != null)

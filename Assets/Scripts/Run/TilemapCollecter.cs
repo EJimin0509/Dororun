@@ -17,7 +17,7 @@ public class TilemapItemCollector : MonoBehaviour
 
             if (tile != null)
             {
-                RewardManager.Instance.CollectItem(tilemap.tag, tilemap.name); // 오브젝트 tag 처리
+                RewardManager.Instance.CollectItem(tilemap.tag); // 오브젝트 tag 처리
                 
                 tilemap.SetTile(cellPosition, null); // 제거
             }

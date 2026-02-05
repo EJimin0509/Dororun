@@ -974,9 +974,6 @@ MonoBehaviour:
   m_EditorClassIdentifier: Assembly-CSharp::RewardManager
   currentCredit: 0
   currentJewel: 0
-  collectedSupporterIDs:
-  - 1
-  - 2
   resultUI: {fileID: 1614146533}
   BossController: {fileID: 1412635557}
 --- !u!4 &751828314
@@ -2259,7 +2256,7 @@ BoxCollider2D:
   m_SpriteTilingProperty:
     border: {x: 0, y: 0, z: 0, w: 0}
     pivot: {x: 0.5, y: 0.5}
-    oldSize: {x: 2.3999999, y: 2.407031}
+    oldSize: {x: 2.55, y: 2.2917836}
     newSize: {x: 2.55, y: 2.2917836}
     adaptiveTilingThreshold: 0.5
     drawMode: 0
@@ -2325,9 +2322,9 @@ MonoBehaviour:
   maxHP: 100
   invincibilityTime: 1.5
   playerHPUI: {fileID: 1567144231}
-  worldScroller1: {fileID: 527707752}
-  worldScroller2: {fileID: 312652130}
-  worldScroller3: {fileID: 0}
+  WorldScrollers:
+  - {fileID: 527707752}
+  - {fileID: 312652130}
 --- !u!1 &1452819992
 GameObject:
   m_ObjectHideFlags: 0
@@ -2452,8 +2449,9 @@ MonoBehaviour:
   sinkSpeed: 1
   explosionRepeatCount: 3
   defeatEffectPrefab: {fileID: 2054029737163442867, guid: f8eccfca099e9604bbc315e4ce08af46, type: 3}
-  worldScroller1: {fileID: 527707752}
-  worldScroller2: {fileID: 312652130}
+  WorldScrollers:
+  - {fileID: 527707752}
+  - {fileID: 312652130}
 --- !u!61 &1452819996
 BoxCollider2D:
   m_ObjectHideFlags: 0
@@ -2681,17 +2679,11 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: d5d7b51dbfbb82746950f2e8339270af, type: 3}
   m_Name: 
   m_EditorClassIdentifier: Assembly-CSharp::ResultUI
-  supporterLibrary:
-  - supporterID: 1
-    supporterSprite: {fileID: 21300000, guid: 812f192e13cfe49449396c1a351919ba, type: 3}
-  - supporterID: 2
-    supporterSprite: {fileID: 21300000, guid: 6ce893c8487cf0640b073bc9ec57f57e, type: 3}
   victoryPanel: {fileID: 1114404919}
   failedPanel: {fileID: 1514934258}
   resultParent: {fileID: 1614146531}
   creditText: {fileID: 1051261183}
   jewelText: {fileID: 1222382332}
-  supporterContainer: {fileID: 1088395061}
   supporterImagePrefab: {fileID: 2928159418360551741, guid: 58c89649e5044b04299cd895c6f72da8, type: 3}
 --- !u!1 &1714653305
 GameObject:

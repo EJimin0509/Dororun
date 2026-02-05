@@ -34,7 +34,7 @@ public class RewardManager : MonoBehaviour
     }
 
     // æ∆¿Ã≈€ »πµÊ Ω√ »£√‚
-    public void CollectItem(string itemTag, string supporterID = "")
+    public void CollectItem(string itemTag)
     {
         // Tag ∫Ò±≥
         switch (itemTag)
