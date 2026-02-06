@@ -40,6 +40,12 @@ public class ResultUI : MonoBehaviour
         creditText.text = credit.ToString();
         jewelText.text = jewel.ToString();
 
+        // 수집한 서포터 표시
+        for (int i = 0; i < RewardManager.Instance.collectedSupporterSprites.Count; i++)
+        {
+            
+        }
+
         Time.timeScale = 0f; // 시간 정지
     }
 

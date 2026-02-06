@@ -219,11 +219,23 @@ public class BossAI_Whale : MonoBehaviour
             }
         }
 
-        // 발사된 모든 미사일 및 탄환 제거
-        GameObject[] bullets = GameObject.FindGameObjectsWithTag("EnemyBullet");
+        // 발사된 모든 적 탄환 제거
+        GameObject[] bullets = GameObject.FindGameObjectsWithTag("Bullet");
         foreach (GameObject bullet in bullets)
         {
-            
+            EnemyBullet enemyBullet = bullet.GetComponent<EnemyBullet>();
+            if (enemyBullet != null) Destroy(bullet);
+        }
+
+        // 발사된 모든 미사일 제거
+        GameObject[] missiles = GameObject.FindGameObjectsWithTag("Missile");
+        foreach (GameObject missile in missiles)
+        {
+            EnemyBullet enemyMissile = missile.GetComponent<EnemyBullet>();
+            if(enemyMissile != null)
+            {
+                enemyMissile.StartCoroutine("ExplodeAndDestroy");
+            }
         }
 
         if (defeatEffectPrefab != null)

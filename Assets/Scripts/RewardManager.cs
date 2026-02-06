@@ -9,6 +9,8 @@ public class RewardManager : MonoBehaviour
     [Header("Current Stage Rewards")]
     public int currentCredit = 0; // 현재 크래디트
     public int currentJewel = 0; // 현재 쥬얼
+    public List<int> collectedSupportersIDs; // 수집한 서포터 ID 리스트
+    public List<Sprite> collectedSupporterSprites; // 수집한 서포터 스프라이트 리스트
     public ResultUI resultUI; // 결과 UI
 
     [Header("Stage Stop")]
@@ -26,11 +28,19 @@ public class RewardManager : MonoBehaviour
         else Destroy(gameObject);
     }
 
+    private void Start()
+    {
+        collectedSupportersIDs = new List<int>();
+        collectedSupporterSprites = new List<Sprite>();
+    }
+
     public void ResetStageData()
     {
         // 기록 초기화
         currentCredit = 0;
         currentJewel = 0;
+        collectedSupportersIDs.Clear();
+        collectedSupporterSprites.Clear();
     }
 
     // 아이템 획득 시 호출
@@ -43,6 +53,22 @@ public class RewardManager : MonoBehaviour
                 currentCredit++; break;
             case "Jewel":
                 currentJewel++; break;
+        }
+    }
+
+    /// <summary>
+    /// 서포터 수집 시 호출
+    /// </summary>
+    /// <param name="id"></param>
+    /// <param name="sprite"></param>
+    public void CollectSupporter(int id, Sprite sprite)
+    {
+        // 서포터 수집 로직
+        if (!collectedSupportersIDs.Contains(id)) // 중복 수집 방지
+        {
+            collectedSupportersIDs.Add(id); // ID 추가
+            collectedSupporterSprites.Add(sprite); // 스프라이트 추가
+            Debug.Log($"Supporter {id} collected");
         }
     }
 
@@ -60,6 +86,12 @@ public class RewardManager : MonoBehaviour
 
         int totalJewel = PlayerPrefs.GetInt("TotalJewel", 0) + finalJewel;
         PlayerPrefs.SetInt("TotalJewel", totalJewel);
+
+        // 수집한 서포터 저장
+        foreach (int id in collectedSupportersIDs)
+        {
+            PlayerPrefs.SetInt("Supporter_" + id, 1); // 수집 완료 표시
+        }
 
         // UI 호출
         if (resultUI != null)
