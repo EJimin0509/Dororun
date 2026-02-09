@@ -13,6 +13,7 @@ public class ResultUI : MonoBehaviour
     public GameObject victoryPanel; // 승리
     public GameObject failedPanel; // 패배
     public GameObject resultParent; // UI 부모
+    public Image[] supporterIcons; // 수집한 서포터 아이콘 배열
 
     /// <summary>
     /// 결과 수치 표시
@@ -25,6 +26,10 @@ public class ResultUI : MonoBehaviour
     void Start()
     {
         resultParent.SetActive(false); // 시작할 땐 숨김
+        foreach (var icon in supporterIcons)
+        {
+            icon.gameObject.SetActive(false); // 초기화
+        }
     }
 
     // UI 활성화 메서드 -> RewardManager에서 호출
@@ -43,7 +48,11 @@ public class ResultUI : MonoBehaviour
         // 수집한 서포터 표시
         for (int i = 0; i < RewardManager.Instance.collectedSupporterSprites.Count; i++)
         {
-            
+            if (i < supporterIcons.Length)
+            {
+                supporterIcons[i].sprite = RewardManager.Instance.collectedSupporterSprites[i];
+                supporterIcons[i].gameObject.SetActive(true);
+            }
         }
 
         Time.timeScale = 0f; // 시간 정지
