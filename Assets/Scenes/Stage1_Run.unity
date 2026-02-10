@@ -1146,6 +1146,7 @@ GameObject:
   - component: {fileID: 630323686}
   - component: {fileID: 630323685}
   - component: {fileID: 630323687}
+  - component: {fileID: 630323688}
   m_Layer: 0
   m_Name: 2
   m_TagString: Supporter
@@ -1286,6 +1287,20 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: Assembly-CSharp::WorldScroller
   scrollSpeed: 12
+--- !u!114 &630323688
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 630323683}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 7816297c4687676458c7af4bb9a26c56, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: Assembly-CSharp::SupporterCollecter
+  supporterID: 2
+  supporterSprite: {fileID: 21300000, guid: 6ce893c8487cf0640b073bc9ec57f57e, type: 3}
 --- !u!1 &685812621
 GameObject:
   m_ObjectHideFlags: 0
@@ -24881,6 +24896,7 @@ GameObject:
   - component: {fileID: 1452862310}
   - component: {fileID: 1452862309}
   - component: {fileID: 1452862311}
+  - component: {fileID: 1452862312}
   m_Layer: 0
   m_Name: 1
   m_TagString: Supporter
@@ -25021,6 +25037,20 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: Assembly-CSharp::WorldScroller
   scrollSpeed: 12
+--- !u!114 &1452862312
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1452862307}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 7816297c4687676458c7af4bb9a26c56, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: Assembly-CSharp::SupporterCollecter
+  supporterID: 1
+  supporterSprite: {fileID: 21300000, guid: 812f192e13cfe49449396c1a351919ba, type: 3}
 --- !u!1 &1554253450
 GameObject:
   m_ObjectHideFlags: 0
@@ -25874,7 +25904,12 @@ MonoBehaviour:
   maxHP: 100
   invincibilityTime: 1.5
   playerHPUI: {fileID: 231881939}
-  WorldScrollers: []
+  WorldScrollers:
+  - {fileID: 1913592136}
+  - {fileID: 1099280626}
+  - {fileID: 1452862311}
+  - {fileID: 630323687}
+  - {fileID: 1646326769}
 --- !u!1 &1781720441
 GameObject:
   m_ObjectHideFlags: 0

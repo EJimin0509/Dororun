@@ -103,7 +103,7 @@ public class StageManager : MonoBehaviour
         isSequenceStarted = true;
         foreach (var s in scrollers)
         {
-            s.enabled = false; // 모든 스크롤러 비활성화
+            if(s != null) s.enabled = false; // 모든 스크롤러 비활성화
         }
 
         player.StartExitAnimation(); // 플레이어 종료 애니메이션 시작
