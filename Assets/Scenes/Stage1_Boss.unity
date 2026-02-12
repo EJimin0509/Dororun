@@ -3475,7 +3475,7 @@ MonoBehaviour:
   warningText: {fileID: 2074844287}
   warningTop: {fileID: 1942540786}
   loopImage: {fileID: 501254585}
-  scrollSpeed: 0.5
+  scrollSpeed: 0.4
 --- !u!4 &2030400236
 Transform:
   m_ObjectHideFlags: 0
