@@ -1,7 +1,6 @@
 using UnityEngine;
 using System.Collections.Generic;
 using UnityEngine.UI;
-using Unity.VisualScripting;
 
 public class SquadManager : MonoBehaviour
 {
@@ -13,14 +12,11 @@ public class SquadManager : MonoBehaviour
     [Header("Status")]
     public List<int> SelectedSquad; // 선택된 ID 리스트
     public bool isSquadMode; // 스쿼드 편성 모드인지
-    public Sprite SelectedVisual; // 선택 후 비주얼
 
     // UI 세팅
     [Header("UI Buttons")]
     public Button SquadModeButton; // 스쿼드 편성 버튼
     public Button SaveButton; // 스쿼드 저장 버튼
-
-    private Sprite originSprite; // 선택 전 비주얼
 
     void Awake() => Instance = this;
 
@@ -30,10 +26,11 @@ public class SquadManager : MonoBehaviour
         SaveButton.gameObject.SetActive(false); // 비활성화 상태로 초기화
         isSquadMode = false;
         LoadSquad();
-
-        originSprite = GetComponent<Sprite>();
     }
 
+    /// <summary>
+    /// 스쿼드 설정 모드를 토글하는 메서드
+    /// </summary>
     public void ToggleSquadMode()
     {
         isSquadMode = !isSquadMode;
@@ -41,6 +38,7 @@ public class SquadManager : MonoBehaviour
         SaveButton.gameObject.SetActive(isSquadMode);
 
         Debug.Log(isSquadMode ? "Squad Mode True" : "Squad Mode False");
+        RefreshAllSupporterUI();
     }
 
     /// <summary>
@@ -56,21 +54,17 @@ public class SquadManager : MonoBehaviour
         {
             SelectedSquad.Remove(id); // 제거
         }
-        else
+        else if (SelectedSquad.Count < 2) // 최대 2개만 선택 가능
         {
-            if (SelectedSquad.Count < 2) // 최대 2개만 선택 가능
-            {
-                SelectedSquad.Add(id); // Add
-            }
-            else // 2명을 초과한 경우
-            {
-                Debug.Log("Maximum Supporters in Squad is 2");
-            }
+            SelectedSquad.Add(id); // Add
+        }
+        else // 2명을 초과한 경우
+        {
+            Debug.Log("Maximum Supporters in Squad is 2");
+            return false;
         }
 
-        SaveButton.interactable = SelectedSquad.Count > 0; // 하나라도 선택되면 활성
-
-        // 추가적인 하이라이트 UI 업데이트 로직 필요 -> 하이라이트 여부까지 Prefab Save 해야 할 듯
+        SaveButton.interactable = true; // 저장 버튼 활성화
 
         return true;
     }
@@ -85,8 +79,9 @@ public class SquadManager : MonoBehaviour
         PlayerPrefs.Save(); // 저장
 
         isSquadMode = false;
-        SaveButton.interactable = false; // 저장 후 비활성화
+        SaveButton.gameObject.SetActive(false); // 저장 후 비활성화
         Debug.Log("Squad Save!");
+        RefreshAllSupporterUI();
     }
 
     /// <summary>
@@ -94,11 +89,24 @@ public class SquadManager : MonoBehaviour
     /// </summary>
     void LoadSquad()
     {
+        SelectedSquad.Clear(); // 한 번 초기화
         int slot0 = PlayerPrefs.GetInt("Squad_Slot0", -1);
         int slot1 = PlayerPrefs.GetInt("Squad_Slot1", -1);
 
         // 기존에 저장된 스쿼드가 있을 경우 리스트에 포함
         if (slot0 != -1) SelectedSquad.Add(slot0);
         if (slot1 != -1) SelectedSquad.Add(slot1);
+    }
+
+    /// <summary>
+    /// 씬 내 모든 서포터 UI 새로고침 메서드
+    /// </summary>
+    private void RefreshAllSupporterUI()
+    {
+        LobbySupporter[] supporters = FindObjectsByType<LobbySupporter>(FindObjectsSortMode.None);
+        foreach (var s in supporters)
+        {
+            s.UpdateHighlight();
+        }
     }
 }

@@ -17,6 +17,9 @@ public class RewardManager : MonoBehaviour
     //public PlayerController RunController; // 러닝 스테이지 플레이어 컨트롤러
     public BossPlayerController BossController; // 보스 스테이지 플레이어 컨트롤러
 
+    [Header("Stage Info")]
+    public int CurrentStageIndex; // 스테이지 번호
+
 
     void Awake()
     {
@@ -91,6 +94,15 @@ public class RewardManager : MonoBehaviour
         foreach (int id in collectedSupportersIDs)
         {
             PlayerPrefs.SetInt("Supporter_" + id, 1); // 수집 완료 표시
+        }
+
+        // 스테이지 클리어 저장
+        int currentMax = PlayerPrefs.GetInt("MaxClearedStage", 0);
+
+        if (CurrentStageIndex > currentMax)
+        {
+            PlayerPrefs.SetInt("MaxClearedStage", CurrentStageIndex);
+            PlayerPrefs.Save();
         }
 
         // UI 호출
