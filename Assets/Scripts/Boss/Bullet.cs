@@ -9,6 +9,10 @@ public class Bullet : MonoBehaviour
     void Start()
     {
         Destroy(gameObject, lifeTime); // 일정 시간 후 총알 제거
+
+        // 레벨에 따른 ATK 업데이트
+        int hpLevel = PlayerPrefs.GetInt("Upgrade_ATK_Level", 1);
+        dmg = 5 + (hpLevel - 1) * 5;
     }
 
     void Update()

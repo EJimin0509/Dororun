@@ -24,7 +24,6 @@ public class PlayerHealth : MonoBehaviour
     public WorldScroller[] WorldScrollers; // 배경을 멈추기 위한 참조
 
     private Animator anim;
-    private SpriteRenderer spriteRenderer;
     private Rigidbody2D rb2d;
     private int isInvincibleID; // 애니메이션 bool 파라미터 IsInvincible을 위한 ID
     private int isDefeatedID; // 애니메이션 bool 파라미터 IsDefeated를 위한 ID
@@ -32,12 +31,16 @@ public class PlayerHealth : MonoBehaviour
     void Start()
     {
         anim = GetComponentInChildren<Animator>();
-        spriteRenderer = GetComponentInChildren<SpriteRenderer>();
         playerHPUI.UpdateHP(CurrentHP, maxHP);
         rb2d = GetComponent<Rigidbody2D>();
 
         isInvincibleID = Animator.StringToHash("IsInvincible");
         isDefeatedID = Animator.StringToHash("IsDefeated");
+
+        // 레벨에 따른 HP 업데이트
+        int hpLevel = PlayerPrefs.GetInt("Upgrade_HP_Level", 1);
+        maxHP = 100 + (hpLevel - 1) * 50;
+        CurrentHP = maxHP;
     }
 
     // 대미지 처리 메서드
@@ -64,8 +67,6 @@ public class PlayerHealth : MonoBehaviour
     void Die()
     {
         StartCoroutine(DefeatedRoutine()); // 애니메이션 실행 코루틴
-        
-        
     }
 
     // 충돌 처리

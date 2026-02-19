@@ -14,6 +14,7 @@ public class BossStageManager : MonoBehaviour
     public float scrollSpeed = 0.5f; // 스크롤 스피드
 
     private bool isScrolling = false; // 스크롤 여부
+  
 
     void Start()
     {
