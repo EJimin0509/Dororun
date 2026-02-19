@@ -1,3 +1,4 @@
+using System.Collections;
 using UnityEngine;
 using UnityEngine.UI;
 
@@ -19,5 +20,35 @@ public class SkillSlot : MonoBehaviour
         SupporterIcon.sprite = data.Icon;
         cooldownTime = data.Cooldown;
         CooldownOverlay.fillAmount = 0;
+    }
+
+    /// <summary>
+    /// 쿨타임 시작 메서드
+    /// </summary>
+    public void StartCooldown()
+    {
+        currentCooldown = cooldownTime;
+        StartCoroutine(CooldownRoutine()); // 쿨타임 시작
+    }
+
+    /// <summary>
+    /// 쿨타임 종료 여부 판단 메서드
+    /// </summary>
+    /// <returns></returns>
+    public bool IsReady() => currentCooldown <= 0;
+
+    /// <summary>
+    /// 쿨타임 루틴
+    /// </summary>
+    /// <returns></returns>
+    IEnumerator CooldownRoutine()
+    {
+        while (currentCooldown > 0)
+        {
+            currentCooldown -= Time.deltaTime;
+            CooldownOverlay.fillAmount = currentCooldown / cooldownTime; // 쿨타임 오버레이 감소
+            yield return null;
+        }
+        CooldownOverlay.fillAmount = 0; // 쿨타임 오버레이 완전히 없앰
     }
 }
