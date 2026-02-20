@@ -80,6 +80,14 @@ public class RewardManager : MonoBehaviour
     {
         float multiplier = isVictory ? 1.5f : 1.0f; // 승리시, 1.5배 보상
 
+        // 스쿼드에 1번 서포터가 있는지 확인
+        bool hasID1 = PlayerPrefs.GetInt("Squad_Slot0", -1) == 1 || PlayerPrefs.GetInt("Squad_Slot1", -1) == 1;
+
+        int id1Lv = 1;
+        if(hasID1) id1Lv = PlayerPrefs.GetInt("Upgrade_Supporter_1_Level", 1);
+
+        multiplier = hasID1 ? multiplier + 0.02f + (id1Lv - 1) * 0.005f : multiplier; // 있을 경우 보상 2% 추가(승리/패배와 상관 없음)
+
         int finalCredit = Mathf.RoundToInt(currentCredit * multiplier); // 최종 크래디트
         int finalJewel = Mathf.RoundToInt(currentJewel * multiplier); // 최종 쥬얼
 

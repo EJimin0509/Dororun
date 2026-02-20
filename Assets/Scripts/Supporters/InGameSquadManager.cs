@@ -6,56 +6,38 @@ using UnityEngine.InputSystem;
 // 로비에서 저장한 데이터를 불러와 UI를 배치하고 입력 감지
 public class InGameSquadManager : MonoBehaviour
 {
-    public SkillSlot[] SkillSlots; // UI 슬롯
+    public SkillSlot SlotQ; // 첫 번째 서포터 UI
+    public SkillSlot SlotE; // 두 번째 서포터 UI
     
-    private int[] activeSquad; // 활성화 스쿼드
-
-    private void Awake()
-    {
-        activeSquad = new int[2]; // 최대 2명
-    }
+    private int idQ, idE; // 활성화 스쿼드
 
     private void Start()
     {
         // 데이터 로드
-        activeSquad[0] = PlayerPrefs.GetInt("Squad_Slot0", -1);
-        activeSquad[1] = PlayerPrefs.GetInt("Squad_Slot1", -1);
+        idQ = PlayerPrefs.GetInt("Squad_Slot0", -1);
+        idE = PlayerPrefs.GetInt("Squad_Slot1", -1);
 
-        // UI 및 패시브 초기화
-        for (int i = 0; i < 2; i++)
-        {
-            if (activeSquad[i] != -1)
-            {
-                var data = SupporterDB.Instance.GetSupporter(activeSquad[i]);
-                SkillSlots[i].Init(data);
-                ApplyPassive(activeSquad[i]);
-            }
-            else
-            {
-                SkillSlots[i].gameObject.SetActive(false);
-            }
-        }
+        // UI 초기화
+        //if (idQ != -1) SlotQ.Setup(SupporterDB.Instance.GetSupporter(idQ));
+        //if (idE != -1) SlotQ.Setup(SupporterDB.Instance.GetSupporter(idE));
     }
 
 
     private void Update()
     {
-        //if(!BossStageManager)
-
-        if (Keyboard.current.qKey.wasPressedThisFrame && activeSquad[0] != -1) UseSkill(0); // Q 입력으로 0번 슬롯 서포터 스킬 사용
-        if (Keyboard.current.eKey.wasPressedThisFrame && activeSquad[1] != -1) UseSkill(1); // E 입력으로 1번 슬롯 서포터 스킬 사용
+        // 보스 스테이지 체크 로직 필요
+        //if (Keyboard.current.qKey.wasPressedThisFrame && SlotQ.IsReady) StartSkill(idQ, SlotQ); // Q 입력으로 0번 슬롯 서포터 스킬 사용
+        //if (Keyboard.current.eKey.wasPressedThisFrame && SlotE.IsReady) StartSkill(idE, SlotE); // E 입력으로 1번 슬롯 서포터 스킬 사용
     }
 
     /// <summary>
-    /// 스킬 사용 메서드
+    /// 스킬 시작 메서드
     /// </summary>
-    /// <param name="slotIndex"></param>
-    void UseSkill(int slotIndex)
+    /// <param name="id"></param>
+    /// <param name="slot"></param>
+    void StartSkill(int id, SkillSlot slot)
     {
-        if (SkillSlots[slotIndex].IsReady()) // 쿨타임이 끝났을 때
-        {
-            StartCoroutine(SkillSequence(activeSquad[slotIndex], SkillSlots[slotIndex]));
-        }
+        StartCoroutine(SkillSequence(id, slot));
     }
 
     /// <summary>
@@ -66,14 +48,18 @@ public class InGameSquadManager : MonoBehaviour
     /// <returns></returns>
     IEnumerator SkillSequence(int id, SkillSlot slot)
     {
+        // 시간 정지 후 스킬 사용 이펙트
         Time.timeScale = 0f;
 
-        // 연출 이펙트
+        // 연출 이펙트 추가 필요
 
         yield return new WaitForSecondsRealtime(1f);
         Time.timeScale = 1f;
 
+        // 스킬 발동
         SkillExecutor.Instance.ExecuteActive(id);
+
+        // 쿨타임
         slot.StartCooldown();
     }
 

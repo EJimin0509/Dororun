@@ -41,6 +41,11 @@ public class PlayerHealth : MonoBehaviour
         int hpLevel = PlayerPrefs.GetInt("Upgrade_HP_Level", 1);
         maxHP = 100 + (hpLevel - 1) * 50;
         CurrentHP = maxHP;
+
+        // 스쿼드에 2번 서포터가 있다면  무적시간 증가
+        bool hasID2 = PlayerPrefs.GetInt("Squad_Slot0", -1) == 2 || PlayerPrefs.GetInt("Squad_Slot1", -1) == 2;
+
+        if (hasID2) invincibilityTime += 0.5f;
     }
 
     // 대미지 처리 메서드
@@ -132,5 +137,28 @@ public class PlayerHealth : MonoBehaviour
         yield return new WaitForSeconds(2.5f);
         
         RewardManager.Instance.FinalizeReward(false);
+    }
+
+    /// <summary>
+    /// 회복 메서드
+    /// </summary>
+    /// <param name="amount">회복량</param>
+    public void Heal(float amount)
+    {
+        CurrentHP += Mathf.RoundToInt(amount); // 힐
+        if (CurrentHP > maxHP) CurrentHP = maxHP; // 최대 체력을 넘지 않도록 함
+        playerHPUI.UpdateHP(CurrentHP, maxHP); // UI 업데이트
+    }
+
+    /// <summary>
+    /// 부활 처리 메서드
+    /// </summary>
+    /// <param name="hpPrecent">회복량</param>
+    public void Resurrect(float hpPrecent)
+    {
+        CurrentHP = Mathf.RoundToInt(maxHP * hpPrecent); // 회복
+        playerHPUI.UpdateHP(CurrentHP, maxHP); // UI 처리
+        StartCoroutine(InvincibilityRoutine()); // 부활 후 무적 부여
+        // 부활 이펙트 필요
     }
 }
