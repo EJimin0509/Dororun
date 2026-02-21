@@ -35,6 +35,13 @@ public class Bullet : MonoBehaviour
             {
                 mob.TakeDamage(dmg);
             }
+
+            // 2번 서포터를 위한 대미지 수치 반환
+            if(SkillExecutor.Instance != null)
+            {
+                SkillExecutor.Instance.ReportDamage(dmg);
+            }
+
             Destroy(gameObject); // 충돌 시 총알 제거
         }     
     }

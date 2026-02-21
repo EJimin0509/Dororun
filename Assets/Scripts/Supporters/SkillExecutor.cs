@@ -12,7 +12,7 @@ public class SkillExecutor : MonoBehaviour
     public GameObject TurretPrefab; // ID 1 포탑
 
     private bool isLifeStealActive = false; // 2번 서포터 액티브 스킬 사용중 상태 여부
-    private float lifeStealPercent = 0.03f; // 2번 서포터 액티브 스킬 힐 퍼센트(기본 3%)
+    private float lifeStealPercent; // 2번 서포터 액티브 스킬 힐 퍼센트
 
     private void Awake()
     {
@@ -75,8 +75,8 @@ public class SkillExecutor : MonoBehaviour
         GameObject t2 = Instantiate(TurretPrefab, pos2, Quaternion.identity, Player);
 
         // 터렛 대미지 전달
-        //t1.GetComponent<Turret>().Init(lv);
-        //t2.GetComponent<Turret>().Init(lv);
+        t1.GetComponent<Turret>().Init(lv);
+        t2.GetComponent<Turret>().Init(lv);
 
         yield return new WaitForSeconds(5f);
 
@@ -103,7 +103,7 @@ public class SkillExecutor : MonoBehaviour
     /// 대미지의 퍼센테이지 만큼 회복
     /// </summary>
     /// <param name="dmg">대미지</param>
-    public void OnPlayerDealDamage(float dmg)
+    public void ReportDamage(float dmg)
     {
         if (isLifeStealActive)
         {

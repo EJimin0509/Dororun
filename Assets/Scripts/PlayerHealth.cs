@@ -44,8 +44,12 @@ public class PlayerHealth : MonoBehaviour
 
         // 스쿼드에 2번 서포터가 있다면  무적시간 증가
         bool hasID2 = PlayerPrefs.GetInt("Squad_Slot0", -1) == 2 || PlayerPrefs.GetInt("Squad_Slot1", -1) == 2;
-
-        if (hasID2) invincibilityTime += 0.5f;
+        
+        if (hasID2)
+        {
+            int id2lv = PlayerPrefs.GetInt($"Upgrade_Supporter_2_Level", 1);
+            invincibilityTime += 0.5f + (id2lv - 1) * 0.1f;
+        }
     }
 
     // 대미지 처리 메서드

@@ -18,16 +18,18 @@ public class InGameSquadManager : MonoBehaviour
         idE = PlayerPrefs.GetInt("Squad_Slot1", -1);
 
         // UI 초기화
-        //if (idQ != -1) SlotQ.Setup(SupporterDB.Instance.GetSupporter(idQ));
-        //if (idE != -1) SlotQ.Setup(SupporterDB.Instance.GetSupporter(idE));
+        if (idQ != -1) SlotQ.Init(SupporterDB.Instance.GetSupporter(idQ));
+        if (idE != -1) SlotQ.Init(SupporterDB.Instance.GetSupporter(idE));
     }
 
 
     private void Update()
     {
         // 보스 스테이지 체크 로직 필요
-        //if (Keyboard.current.qKey.wasPressedThisFrame && SlotQ.IsReady) StartSkill(idQ, SlotQ); // Q 입력으로 0번 슬롯 서포터 스킬 사용
-        //if (Keyboard.current.eKey.wasPressedThisFrame && SlotE.IsReady) StartSkill(idE, SlotE); // E 입력으로 1번 슬롯 서포터 스킬 사용
+        if (Keyboard.current.qKey.wasPressedThisFrame && idQ != -1 && SlotQ.IsReady())
+            StartSkill(idQ, SlotQ); // Q 입력으로 0번 슬롯 서포터 스킬 사용
+        if (Keyboard.current.eKey.wasPressedThisFrame && idE != -1 && SlotE.IsReady())
+            StartSkill(idE, SlotE); // E 입력으로 1번 슬롯 서포터 스킬 사용
     }
 
     /// <summary>
@@ -61,14 +63,5 @@ public class InGameSquadManager : MonoBehaviour
 
         // 쿨타임
         slot.StartCooldown();
-    }
-
-    /// <summary>
-    /// 패시브 적용 메서드
-    /// </summary>
-    /// <param name="id"></param>
-    void ApplyPassive(int id)
-    {
-        //PassiveExecutor.Instance.Apply(id);
     }
 }
