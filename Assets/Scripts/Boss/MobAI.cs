@@ -1,7 +1,7 @@
 using System.Collections;
 using UnityEngine;
 
-public class MobAI : MonoBehaviour
+public class MobAI : MonoBehaviour, IDamageable
 {
     public float moveSpeed = 3f; // 이동 속도
     public float shootingInterval = 2f; // 탄환 발사 간격

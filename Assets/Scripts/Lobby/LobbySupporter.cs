@@ -116,5 +116,12 @@ public class LobbySupporter : MonoBehaviour, IPointerEnterHandler, IPointerExitH
     void OpenInfoPopup()
     {
         InfoPopup.SetActive(true); // 팝업 띄우기
+
+        // 팝업에 스크립트가 있다면 ID 전달
+        var upgradePopup = InfoPopup.GetComponent<SupporterUpgradePopup>();
+        if (upgradePopup != null)
+        {
+            upgradePopup.SetInfo(SupporterID);
+        }
     }
 }

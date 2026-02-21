@@ -19,7 +19,11 @@ public class InGameSquadManager : MonoBehaviour
 
         // UI 초기화
         if (idQ != -1) SlotQ.Init(SupporterDB.Instance.GetSupporter(idQ));
-        if (idE != -1) SlotQ.Init(SupporterDB.Instance.GetSupporter(idE));
+        if (idE != -1) SlotE.Init(SupporterDB.Instance.GetSupporter(idE));
+
+        // 패시브 초기화
+        ApplyPassiveIfOwned(idQ);
+        ApplyPassiveIfOwned(idE);
     }
 
 
@@ -63,5 +67,28 @@ public class InGameSquadManager : MonoBehaviour
 
         // 쿨타임
         slot.StartCooldown();
+    }
+
+    /// <summary>
+    /// 패시브 초기화 메서드
+    /// </summary>
+    /// <param name="id"></param>
+    void ApplyPassiveIfOwned(int id)
+    {
+        if (id == -1) return;
+
+        int lv = PlayerPrefs.GetInt($"Upgrade_Supporter_{id}_Level", 1);
+        PlayerHealth ph = FindAnyObjectByType<PlayerHealth>();
+
+        if (id == 3)
+        {
+            // 3번 서포터 패시브: 지속 힐 시작
+            SkillExecutor.Instance.StartPassive_ID3(lv);
+        }
+        else if (id == 4)
+        {
+            // 4번 서포터 패시브: 부활 세팅
+            ph.SetResurrection(lv);
+        }
     }
 }

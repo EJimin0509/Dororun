@@ -12,7 +12,7 @@ public class Bullet : MonoBehaviour
 
         // 레벨에 따른 ATK 업데이트
         int hpLevel = PlayerPrefs.GetInt("Upgrade_ATK_Level", 1);
-        dmg = 5 + (hpLevel - 1) * 5;
+        dmg = (5 + (hpLevel - 1) * 5) * (1f + SkillExecutor.Instance.GetCurrentDmgBonus()); // 4번 서포터 여부
     }
 
     void Update()

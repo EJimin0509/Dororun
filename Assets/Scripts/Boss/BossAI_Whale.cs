@@ -1,7 +1,7 @@
 using UnityEngine;
 using System.Collections;
 
-public class BossAI_Whale : MonoBehaviour
+public class BossAI_Whale : MonoBehaviour, IDamageable
 {
     /// <summary>
     /// ∫∏Ω∫ Ω∫≈»

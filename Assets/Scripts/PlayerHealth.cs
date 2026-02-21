@@ -27,6 +27,8 @@ public class PlayerHealth : MonoBehaviour
     private Rigidbody2D rb2d;
     private int isInvincibleID; // 애니메이션 bool 파라미터 IsInvincible을 위한 ID
     private int isDefeatedID; // 애니메이션 bool 파라미터 IsDefeated를 위한 ID
+    private bool canResurrect = false; // 부활 가능 여부(4번 서포터 패시브)
+    private float resurrectHpRatio = 0.1f; // 부활시 HP 회복량(4번 서포터 패시브)
 
     void Start()
     {
@@ -63,7 +65,11 @@ public class PlayerHealth : MonoBehaviour
         playerHPUI.UpdateHP(CurrentHP, maxHP); // UI 갱신
         Debug.Log($"dmg: {damage}, HP: {CurrentHP}/{maxHP}");
 
-        if (anim != null && CurrentHP <= 0) Die(); // 사망
+        if (anim != null && CurrentHP <= 0)
+        {
+            if(canResurrect) ExecuteResurrection(); // 부활 가능하면 부활
+            else Die(); // 사망
+        }
 
         if (anim != null && CurrentHP > 0) 
         {
@@ -155,14 +161,51 @@ public class PlayerHealth : MonoBehaviour
     }
 
     /// <summary>
-    /// 부활 처리 메서드
+    /// 4번 서포터 패시브 부활을 위한 메서드
     /// </summary>
-    /// <param name="hpPrecent">회복량</param>
-    public void Resurrect(float hpPrecent)
+    /// <param name="lv">스킬 레벨</param>
+    public void SetResurrection(int lv)
     {
-        CurrentHP = Mathf.RoundToInt(maxHP * hpPrecent); // 회복
-        playerHPUI.UpdateHP(CurrentHP, maxHP); // UI 처리
-        StartCoroutine(InvincibilityRoutine()); // 부활 후 무적 부여
-        // 부활 이펙트 필요
+        canResurrect = true;
+        resurrectHpRatio = 0.1f + (lv - 1) * 0.02f;
+    }
+
+    /// <summary>
+    /// 4번 서포터 패시브 부활 메서드
+    /// </summary>
+    void ExecuteResurrection()
+    {
+        canResurrect = false; // 1회만 부활
+        CurrentHP = Mathf.RoundToInt(maxHP * resurrectHpRatio); // 부활
+        playerHPUI.UpdateHP(CurrentHP, maxHP); // UI 업데이트
+
+        // 부활 이펙트가 있다면 여기서 생성
+
+        Debug.Log($"Resurrect! HP {resurrectHpRatio * 100}% Recovery");
+
+        StartCoroutine(InvincibilityRoutine()); // 즉시 무적 부여
+    }
+
+    /// <summary>
+    /// 4번 서포터 스킬 중 무적 메서드
+    /// </summary>
+    /// <param name="duration"></param>
+    public void SetTemporaryInvincible(float duration)
+    {
+        StartCoroutine(TemporaryInvincibilityRoutine(duration));
+    }
+
+    /// <summary>
+    /// 4번 서포터 스킬 중 무적 코루틴
+    /// </summary>
+    /// <param name="duration"></param>
+    /// <returns></returns>
+    IEnumerator TemporaryInvincibilityRoutine(float duration)
+    {
+        isInvincible = true;
+
+        yield return new WaitForSeconds(duration);
+
+        isInvincible = false;
     }
 }
