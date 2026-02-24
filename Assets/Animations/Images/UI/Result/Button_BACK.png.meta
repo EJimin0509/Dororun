@@ -1,10 +1,10 @@
 fileFormatVersion: 2
-guid: 20d8a07c798dcc54684e7747bc25699a
+guid: 2425c69f20d0c1b40a014fadfa2f7ca2
 TextureImporter:
   internalIDToNameTable:
   - first:
-      213: -4181817685305314925
-    second: victory_UI_0
+      213: 2265319720951906023
+    second: Button_BACK_0
   externalObjects: {}
   serializedVersion: 13
   mipmaps:
@@ -109,17 +109,30 @@ TextureImporter:
     ignorePlatformSupport: 0
     androidETC2FallbackOverride: 0
     forceMaximumCompressionQuality_BC6H_BC7: 0
+  - serializedVersion: 4
+    buildTarget: WebGL
+    maxTextureSize: 2048
+    resizeAlgorithm: 0
+    textureFormat: -1
+    textureCompression: 1
+    compressionQuality: 50
+    crunchedCompression: 0
+    allowsAlphaSplitting: 0
+    overridden: 0
+    ignorePlatformSupport: 0
+    androidETC2FallbackOverride: 0
+    forceMaximumCompressionQuality_BC6H_BC7: 0
   spriteSheet:
     serializedVersion: 2
     sprites:
     - serializedVersion: 2
-      name: victory_UI_0
+      name: Button_BACK_0
       rect:
         serializedVersion: 2
-        x: 2
-        y: 1
-        width: 396
-        height: 299
+        x: 0
+        y: 0
+        width: 70
+        height: 23
       alignment: 0
       pivot: {x: 0, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
@@ -128,8 +141,8 @@ TextureImporter:
       physicsShape: []
       tessellationDetail: -1
       bones: []
-      spriteID: 3913eefa8f237f5c0800000000000000
-      internalID: -4181817685305314925
+      spriteID: 7ee7606b848007f10800000000000000
+      internalID: 2265319720951906023
       vertices: []
       indices: 
       edges: []
@@ -148,7 +161,7 @@ TextureImporter:
     spriteCustomMetadata:
       entries: []
     nameFileIdTable:
-      victory_UI_0: -4181817685305314925
+      Button_BACK_0: 2265319720951906023
   mipmapLimitGroupName: 
   pSDRemoveMatte: 0
   userData: 

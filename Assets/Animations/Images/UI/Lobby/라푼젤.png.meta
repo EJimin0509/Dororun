@@ -1,10 +1,22 @@
 fileFormatVersion: 2
-guid: 80036abccb2743f4398a74342bca219e
+guid: dda7d96b0c508824c85ca32012a5d638
 TextureImporter:
   internalIDToNameTable:
   - first:
-      213: 4892848861380879063
-    second: playerHP 1_0
+      213: -5736952117967110137
+    second: "\uB77C\uD47C\uC824_0"
+  - first:
+      213: 1630968384053879707
+    second: "\uB77C\uD47C\uC824_1"
+  - first:
+      213: 202076104489654160
+    second: "\uB77C\uD47C\uC824_2"
+  - first:
+      213: 4338339629566097054
+    second: "\uB77C\uD47C\uC824_3"
+  - first:
+      213: -7673843984084445583
+    second: "\uB77C\uD47C\uC824_4"
   externalObjects: {}
   serializedVersion: 13
   mipmaps:
@@ -109,17 +121,30 @@ TextureImporter:
     ignorePlatformSupport: 0
     androidETC2FallbackOverride: 0
     forceMaximumCompressionQuality_BC6H_BC7: 0
+  - serializedVersion: 4
+    buildTarget: WebGL
+    maxTextureSize: 2048
+    resizeAlgorithm: 0
+    textureFormat: -1
+    textureCompression: 1
+    compressionQuality: 50
+    crunchedCompression: 0
+    allowsAlphaSplitting: 0
+    overridden: 0
+    ignorePlatformSupport: 0
+    androidETC2FallbackOverride: 0
+    forceMaximumCompressionQuality_BC6H_BC7: 0
   spriteSheet:
     serializedVersion: 2
     sprites:
     - serializedVersion: 2
-      name: playerHP 1_0
+      name: "\uB77C\uD47C\uC824_0"
       rect:
         serializedVersion: 2
         x: 0
-        y: 0
-        width: 192
-        height: 192
+        y: 11
+        width: 30
+        height: 41
       alignment: 0
       pivot: {x: 0, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
@@ -128,8 +153,96 @@ TextureImporter:
       physicsShape: []
       tessellationDetail: -1
       bones: []
-      spriteID: 7d22842bd14e6e340800000000000000
-      internalID: 4892848861380879063
+      spriteID: 7004523c1704260b0800000000000000
+      internalID: -5736952117967110137
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: "\uB77C\uD47C\uC824_1"
+      rect:
+        serializedVersion: 2
+        x: 30
+        y: 0
+        width: 67
+        height: 55
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: b93ac63aa1d52a610800000000000000
+      internalID: 1630968384053879707
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: "\uB77C\uD47C\uC824_2"
+      rect:
+        serializedVersion: 2
+        x: 95
+        y: 25
+        width: 39
+        height: 30
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 09753b9752bedc200800000000000000
+      internalID: 202076104489654160
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: "\uB77C\uD47C\uC824_3"
+      rect:
+        serializedVersion: 2
+        x: 105
+        y: 0
+        width: 40
+        height: 26
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: e96794758e0e43c30800000000000000
+      internalID: 4338339629566097054
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: "\uB77C\uD47C\uC824_4"
+      rect:
+        serializedVersion: 2
+        x: 134
+        y: 25
+        width: 11
+        height: 30
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 176d0e2ed87018590800000000000000
+      internalID: -7673843984084445583
       vertices: []
       indices: 
       edges: []
@@ -148,7 +261,11 @@ TextureImporter:
     spriteCustomMetadata:
       entries: []
     nameFileIdTable:
-      playerHP 1_0: 4892848861380879063
+      "\uB77C\uD47C\uC824_0": -5736952117967110137
+      "\uB77C\uD47C\uC824_1": 1630968384053879707
+      "\uB77C\uD47C\uC824_2": 202076104489654160
+      "\uB77C\uD47C\uC824_3": 4338339629566097054
+      "\uB77C\uD47C\uC824_4": -7673843984084445583
   mipmapLimitGroupName: 
   pSDRemoveMatte: 0
   userData: 

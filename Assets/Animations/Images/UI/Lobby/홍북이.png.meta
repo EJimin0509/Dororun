@@ -1,10 +1,22 @@
 fileFormatVersion: 2
-guid: 346c26782944f3943b715c041781f464
+guid: 2d756d8aefbefa749ae546e2ac017a16
 TextureImporter:
   internalIDToNameTable:
   - first:
-      213: -133376775676657800
-    second: Button_EXIT_0
+      213: -3576039277243949403
+    second: "\uD64D\uBD81\uC774_0"
+  - first:
+      213: 626657649825153241
+    second: "\uD64D\uBD81\uC774_1"
+  - first:
+      213: -4528637253893311874
+    second: "\uD64D\uBD81\uC774_2"
+  - first:
+      213: -1367226289252953551
+    second: "\uD64D\uBD81\uC774_3"
+  - first:
+      213: -6466042441046469857
+    second: "\uD64D\uBD81\uC774_4"
   externalObjects: {}
   serializedVersion: 13
   mipmaps:
@@ -46,7 +58,7 @@ TextureImporter:
   nPOTScale: 0
   lightmap: 0
   compressionQuality: 50
-  spriteMode: 1
+  spriteMode: 2
   spriteExtrude: 1
   spriteMeshType: 1
   alignment: 0
@@ -109,17 +121,30 @@ TextureImporter:
     ignorePlatformSupport: 0
     androidETC2FallbackOverride: 0
     forceMaximumCompressionQuality_BC6H_BC7: 0
+  - serializedVersion: 4
+    buildTarget: WebGL
+    maxTextureSize: 2048
+    resizeAlgorithm: 0
+    textureFormat: -1
+    textureCompression: 1
+    compressionQuality: 50
+    crunchedCompression: 0
+    allowsAlphaSplitting: 0
+    overridden: 0
+    ignorePlatformSupport: 0
+    androidETC2FallbackOverride: 0
+    forceMaximumCompressionQuality_BC6H_BC7: 0
   spriteSheet:
     serializedVersion: 2
     sprites:
     - serializedVersion: 2
-      name: Button_EXIT_0
+      name: "\uD64D\uBD81\uC774_0"
       rect:
         serializedVersion: 2
         x: 0
         y: 0
-        width: 412
-        height: 107
+        width: 50
+        height: 55
       alignment: 0
       pivot: {x: 0, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
@@ -128,8 +153,96 @@ TextureImporter:
       physicsShape: []
       tessellationDetail: -1
       bones: []
-      spriteID: 87f71887786262ef0800000000000000
-      internalID: -133376775676657800
+      spriteID: 5ae9709593b5f5ec0800000000000000
+      internalID: -3576039277243949403
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: "\uD64D\uBD81\uC774_1"
+      rect:
+        serializedVersion: 2
+        x: 55
+        y: 31
+        width: 39
+        height: 24
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 9d00c95ffc552b800800000000000000
+      internalID: 626657649825153241
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: "\uD64D\uBD81\uC774_2"
+      rect:
+        serializedVersion: 2
+        x: 100
+        y: 10
+        width: 32
+        height: 43
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: e72b61d496c0721c0800000000000000
+      internalID: -4528637253893311874
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: "\uD64D\uBD81\uC774_3"
+      rect:
+        serializedVersion: 2
+        x: 135
+        y: 0
+        width: 10
+        height: 55
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 132908d0fe2a60de0800000000000000
+      internalID: -1367226289252953551
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: "\uD64D\uBD81\uC774_4"
+      rect:
+        serializedVersion: 2
+        x: 49
+        y: 0
+        width: 51
+        height: 30
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: f1353de88a00446a0800000000000000
+      internalID: -6466042441046469857
       vertices: []
       indices: 
       edges: []
@@ -138,7 +251,7 @@ TextureImporter:
     customData: 
     physicsShape: []
     bones: []
-    spriteID: 5e97eb03825dee720800000000000000
+    spriteID: 
     internalID: 0
     vertices: []
     indices: 
@@ -148,7 +261,11 @@ TextureImporter:
     spriteCustomMetadata:
       entries: []
     nameFileIdTable:
-      Button_EXIT_0: -133376775676657800
+      "\uD64D\uBD81\uC774_0": -3576039277243949403
+      "\uD64D\uBD81\uC774_1": 626657649825153241
+      "\uD64D\uBD81\uC774_2": -4528637253893311874
+      "\uD64D\uBD81\uC774_3": -1367226289252953551
+      "\uD64D\uBD81\uC774_4": -6466042441046469857
   mipmapLimitGroupName: 
   pSDRemoveMatte: 0
   userData: 
