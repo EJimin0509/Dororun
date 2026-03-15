@@ -10,7 +10,7 @@ public class MainManager : MonoBehaviour
         Time.timeScale = 1f;
 
         // Stage1_Run ·Îµå
-        SceneManager.LoadScene("Stage1_Run");
+        SceneManager.LoadScene("Lobby");
     }
 
     // exit

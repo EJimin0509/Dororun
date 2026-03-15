@@ -24,11 +24,16 @@ public class UpgradeManager : MonoBehaviour
     public TextMeshProUGUI CurrentATKText; // 현재 ATK 수치를 보여줄 TMP
     public Button ATKUpgradeButton; // 업그레이드 버튼
 
+    [Header("Animation Settings")]
+    public Animator playerAnimator; // 로비에 서 있는 캐릭터의 Animator 연결
+    private int upgradeAnimationID; // 재생할 트리거 파라미터 이름
+
     private LobbyManager lobbyManager; // 로비 매니저 인스턴스
 
     private void Start()
     {
         lobbyManager = FindAnyObjectByType<LobbyManager>(); // LobbyManager가 있는 모든 오브젝트
+        upgradeAnimationID = Animator.StringToHash("IsUpgrade");
         UpdateUI();
     }
 
@@ -44,6 +49,9 @@ public class UpgradeManager : MonoBehaviour
         {
             PlayerPrefs.SetInt("Upgrade_HP_Level", currentLv + 1); // 레벨 상승
             PlayerPrefs.Save();
+            // 업그레이드 성공 애니메이션 실행
+            playerAnimator.SetTrigger(upgradeAnimationID);
+
             UpdateUI();
         }
     }
@@ -60,6 +68,9 @@ public class UpgradeManager : MonoBehaviour
         {
             PlayerPrefs.SetInt("Upgrade_ATK_Level", currentLv + 1); // 레벨 상승
             PlayerPrefs.Save();
+            // 업그레이드 성공 애니메이션 실행
+            playerAnimator.SetTrigger(upgradeAnimationID);
+
             UpdateUI();
         }
     }

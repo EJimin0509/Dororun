@@ -7,7 +7,12 @@ public class SupporterUpgradePopup : MonoBehaviour
     [Header("UI References")]
     public TextMeshProUGUI levelText;      // 현재 레벨 표시
     public Button upgradeButton;           // 업그레이드 버튼
-    public TextMeshProUGUI costText;       // 소모 쥬얼 표시
+    //public TextMeshProUGUI costText;       // 소모 쥬얼 표시
+
+    [Header("Skill Stats UI")]
+    public TextMeshProUGUI statText_1;     // 첫 번째 능력치 (예: 크래디트 획득)
+    public TextMeshProUGUI statText_2;     // 두 번째 능력치 (예: 포탑 대미지)
+    public TextMeshProUGUI statText_3;     // 세 번째 능력치 (3번 서포터 전용)
 
     private int currentSupporterID;
     private const int MAX_LEVEL = 5;
@@ -53,6 +58,38 @@ public class SupporterUpgradePopup : MonoBehaviour
         // 버튼 활성화 조건: 만렙이 아니고 쥬얼이 1개 이상일 때
         upgradeButton.interactable = (level < MAX_LEVEL && PlayerPrefs.GetInt("TotalJewel", 0) >= 1);
 
-        if (costText != null) costText.text = "1";
+        //if (costText != null) costText.text = "1";
+
+        UpdateStatTexts(level);
+    }
+
+    private void UpdateStatTexts(int lv)
+    {
+        // 3번 서포터 외에는 statText_3를 비활성화
+        if (statText_3 != null) statText_3.gameObject.SetActive(currentSupporterID == 3);
+
+        switch (currentSupporterID)
+        {
+            case 1:
+                statText_1.text = $"{10 + (lv - 1) * 5}";
+                statText_2.text = $"{5 + (lv - 1) * 2}";
+                break;
+
+            case 2:
+                statText_1.text = $"{2 + (lv - 1) * 0.5f}";
+                statText_2.text = $"{5 + (lv - 1) * 2}";
+                break;
+
+            case 3:
+                statText_1.text = $"{2 + (lv - 1) * 1}";
+                statText_2.text = $"{10 + (lv - 1) * 5}";
+                statText_3.text = $"{3 + (lv - 1) * 1}";
+                break;
+
+            case 4:
+                statText_1.text = $"{10 + (lv - 1) * 2}";
+                statText_2.text = $"{10 + (lv - 1) * 2}";
+                break;
+        }
     }
 }
