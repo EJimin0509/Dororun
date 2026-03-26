@@ -1,5 +1,6 @@
-using UnityEngine;
 using System.Collections;
+using System.Collections.Generic;
+using UnityEngine;
 
 public class BossAI_Whale : MonoBehaviour, IDamageable
 {
@@ -53,6 +54,9 @@ public class BossAI_Whale : MonoBehaviour, IDamageable
     public WorldScroller[] WorldScrollers; // 배경을 멈추기 위한 참조
     private int explosionEffectID; // ExplosionEffect 애니메이션 해싱위한 ID
     private int explosionEndID; // ExplosionEnd 애니메이션 해싱위한 ID
+
+    [Header("Spawn Settings")]
+    public float spawnYRange = 4f; // 몹 소환 시 Y축 랜덤 범위
 
     private void Awake()
     {
@@ -115,16 +119,24 @@ public class BossAI_Whale : MonoBehaviour, IDamageable
     // 패턴3: 소환 몹 생성
     public void SpawnMob()
     {
-        int currentMobCount = GameObject.FindGameObjectsWithTag("Mob").Length; // 현재 소환된 몹 수 확인
-        if (currentMobCount < maxMobCount)
+        // 현재 맵에 있는 몹 수 체크
+        int currentMobCount = GameObject.FindGameObjectsWithTag("Mob").Length;
+
+        // 부족한 만큼 생성 (최대 3마리까지)
+        int spawnCount = maxMobCount - currentMobCount;
+
+        for (int i = 0; i < spawnCount; i++)
         {
-            Vector3 spawnPosition = shootPoint_bullet.position; // 소환 위치 설정
-            GameObject mob = Instantiate(mobPrefab, spawnPosition, Quaternion.identity); // 몹 소환
-            
+            // Y축 랜덤 위치 계산 (보스 위치 기준 +- spawnYRange)
+            float randomY = transform.position.y + Random.Range(-spawnYRange, spawnYRange);
+            Vector3 spawnPosition = new Vector3(shootPoint_bullet.position.x, randomY, 0);
+
+            GameObject mob = Instantiate(mobPrefab, spawnPosition, Quaternion.identity);
+
             Rigidbody2D mobRb = mob.GetComponent<Rigidbody2D>();
             if (mobRb != null)
             {
-                mobRb.linearVelocity = Vector2.left * 2f; // 몹 이동 속도 설정
+                mobRb.linearVelocity = Vector2.left * 2f;
             }
         }
     }
@@ -132,19 +144,32 @@ public class BossAI_Whale : MonoBehaviour, IDamageable
     // 미사일 공격 시퀀스
     IEnumerator MissileSequence()
     {
-        // 공격 위치 결정
-        float targetY = GameObject.FindWithTag("Player").transform.position.y;
-        Vector3 spawnPos = new Vector3(0, targetY, 0);
+        // 1. 플레이어 위치 기반 및 완전 랜덤 위치 등 두 군데 타겟 지정
+        float playerY = GameObject.FindWithTag("Player").transform.position.y;
+        float targetY1 = playerY; // 하나는 현재 플레이어 위치
+        float targetY2 = Random.Range(-4f, 4f); // 하나는 맵 전체 랜덤 위치 (범위는 환경에 맞게 조절)
 
-        // Warning Zone 생성
-        GameObject warning = Instantiate(warningZonePrefab, spawnPos, Quaternion.identity);
-        warning.transform.localScale = new Vector3(30f, 1f, 1f); // 경고 존 크기 조절
+        // 2. 경고 존 생성 (리스트로 관리하여 나중에 한꺼번에 제거)
+        List<GameObject> warnings = new List<GameObject>();
+        warnings.Add(Instantiate(warningZonePrefab, new Vector3(0, targetY1, 0), Quaternion.identity));
+        warnings.Add(Instantiate(warningZonePrefab, new Vector3(0, targetY2, 0), Quaternion.identity));
 
-        yield return new WaitForSeconds(1.5f); // 경고 존 표시 시간
+        foreach (var w in warnings)
+        {
+            w.transform.localScale = new Vector3(30f, 1f, 1f);
+        }
 
-        // 경고창 제거 및 미사일 발사
-        Destroy(warning);
-        LaunchMissile(targetY);
+        yield return new WaitForSeconds(1.5f); // 경고 시간
+
+        // 3. 경고창 제거
+        foreach (var w in warnings)
+        {
+            Destroy(w);
+        }
+
+        // 4. 미사일 2개 발사
+        LaunchMissile(targetY1);
+        LaunchMissile(targetY2);
     }
 
     // 미사일 발사

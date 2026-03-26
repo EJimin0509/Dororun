@@ -1,0 +1,18 @@
+%YAML 1.1
+%TAG !u! tag:unity3d.com,2011:
+--- !u!114 &11400000
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 3098c3e3bca92c74a9074ec8228864d6, type: 3}
+  m_Name: Rapunzel
+  m_EditorClassIdentifier: Assembly-CSharp::SupporterData
+  ID: 2
+  Icon: {fileID: -2699817939580031938, guid: a9476eb90b9b5604f9516c00f43d672d, type: 3}
+  ActiveDuration: 5
+  Cooldown: 15

@@ -22,6 +22,8 @@ public class StageManager : MonoBehaviour
     public GameObject obj1;
     public GameObject objGO;
 
+    public int BossSceneNum;
+
     private float startX; // 시작 위치 X 좌표
     private bool isGoalReached = false; // 목표 도달 여부
     private bool isSequenceStarted = false; // 시퀀스 시작 여부
@@ -113,6 +115,6 @@ public class StageManager : MonoBehaviour
     public void SwitchToBossBattle()
     {
         Debug.Log("Switching to Boss Battle Scene...");
-        UnityEngine.SceneManagement.SceneManager.LoadScene("Stage1_Boss");
+        UnityEngine.SceneManagement.SceneManager.LoadScene(BossSceneNum);
     }
 }

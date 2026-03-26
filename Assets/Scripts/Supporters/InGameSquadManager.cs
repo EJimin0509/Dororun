@@ -8,7 +8,8 @@ public class InGameSquadManager : MonoBehaviour
 {
     public SkillSlot SlotQ; // 첫 번째 서포터 UI
     public SkillSlot SlotE; // 두 번째 서포터 UI
-    
+
+    public bool isBossStage = false; // 보스전 여부
     private int idQ, idE; // 활성화 스쿼드
 
     private void Start()
@@ -21,15 +22,25 @@ public class InGameSquadManager : MonoBehaviour
         if (idQ != -1) SlotQ.Init(SupporterDB.Instance.GetSupporter(idQ));
         if (idE != -1) SlotE.Init(SupporterDB.Instance.GetSupporter(idE));
 
+        SlotQ.SetSlotActive(false);
+        SlotE.SetSlotActive(false);
+
         // 패시브 초기화
         ApplyPassiveIfOwned(idQ);
         ApplyPassiveIfOwned(idE);
+
+        string sceneName = UnityEngine.SceneManagement.SceneManager.GetActiveScene().name;
+        if (sceneName.Contains("Boss"))
+        {
+            ActivateBossMode();
+        }
     }
 
 
     private void Update()
     {
-        // 보스 스테이지 체크 로직 필요
+        if (!isBossStage) return;
+
         if (Keyboard.current.qKey.wasPressedThisFrame && idQ != -1 && SlotQ.IsReady())
             StartSkill(idQ, SlotQ); // Q 입력으로 0번 슬롯 서포터 스킬 사용
         if (Keyboard.current.eKey.wasPressedThisFrame && idE != -1 && SlotE.IsReady())
@@ -90,5 +101,17 @@ public class InGameSquadManager : MonoBehaviour
             // 4번 서포터 패시브: 부활 세팅
             ph.SetResurrection(lv);
         }
+    }
+
+    /// <summary>
+    /// 보스 스테이지 시작
+    /// </summary>
+    public void ActivateBossMode()
+    {
+        isBossStage = true;
+
+        // [시각화] UI 활성화
+        if (idQ != -1) SlotQ.SetSlotActive(true);
+        if (idE != -1) SlotE.SetSlotActive(true);
     }
 }
